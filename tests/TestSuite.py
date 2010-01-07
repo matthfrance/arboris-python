@@ -3,7 +3,10 @@
 
 import unittest
 import ConstraintsTests
+import JointsTests
+import UpdateDynamicTests
 
-tests = unittest.TestSuite([ConstraintsTests.ts])
+tests = unittest.TestSuite([ConstraintsTests.ts, JointsTests.ts,
+                            UpdateDynamicTests.ts])
 
 unittest.TextTestRunner(verbosity=2).run(tests)
