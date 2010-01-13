@@ -121,10 +121,6 @@ class Human36TestCase(BaseTest):
 
 			pos_array = zeros((len(tag_frames),3))
 			for t in _humans_tags(1.741):
-				print(pos_dict)
-					#print("HumansName",t['HumansName'])
-					#print(pos_array[t['HumansId']-1,:])
-					#print(pos_dict[t['HumansName']])
 				pos_array[t['HumansId']-1,:] = pos_dict[t['HumansName']]
 			return pos_array
 		p = tag_positions(tags)
