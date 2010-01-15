@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import ConstraintsTests, JointsTests, UpdateDynamicTests, homogeneousmatrixTest
-import Human36Tests, FrameTests, WorldTests
+import ConstraintsTests, JointsTests, homogeneousmatrixTest
+import Human36Tests, FrameTests, WorldTests, ControllersTests
 
-tests = unittest.TestSuite([ConstraintsTests.ts, JointsTests.ts,
-                            UpdateDynamicTests.ts, homogeneousmatrixTest.ts,
-                            Human36Tests.ts, FrameTests.ts, WorldTests.ts])
+tests = unittest.TestSuite([ JointsTests.ts, FrameTests.ts, ConstraintsTests.ts,
+                             ControllersTests.ts, homogeneousmatrixTest.ts,
+                             WorldTests.ts, Human36Tests.ts ])
 
 unittest.TextTestRunner(verbosity=2).run(tests)
