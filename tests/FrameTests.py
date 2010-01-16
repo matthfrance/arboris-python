@@ -3,7 +3,7 @@ from ArborisTests import BaseTest
 from arboris.core import Body, SubFrame, World
 from arboris import homogeneousmatrix as Hg
 from arboris.robots.simplearm import add_simplearm
-from numpy import array
+from numpy import array, eye
 
 
 class BodyTestCase(BaseTest):
@@ -32,7 +32,7 @@ class BodyTestCase(BaseTest):
 
     def testConstruction(self):
         b = Body()
-        b = Body(name='MyHead', mass=5, viscosity=None)
+        b = Body(name='MyHead', mass=eye(6)*5, viscosity=None)
 
     def testSubFrames(self):
         body = Body()

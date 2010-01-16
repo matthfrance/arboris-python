@@ -18,16 +18,16 @@ class TestLinks(WorldTestCase):
     def testLinksCreation(self):
         w = World()
         bulb = RyRxJoint(name='bulb')
-        stem = Body(name='stem', mass=.1)
+        stem = Body(name='stem', mass=eye(6)*0.1)
         w.add_link(w.ground, bulb, stem)
 
         stem_top = SubFrame(stem, bpose=transl(0, 0, 1), name='stem_top')
         flowerR = RyJoint(gpos=.5, name='flowerR')
-        leafR = Body('leafR', mass=.01)
+        leafR = Body('leafR', mass=eye(6)*0.01)
         w.add_link(stem_top, flowerR, leafR)
 
         flowerL = RyJoint(gpos=(-.5), name='flowerL')
-        leafL = Body('leafL', mass=.01)
+        leafL = Body('leafL', mass=eye(6)*.01)
         w.add_link(stem_top, flowerL, leafL)
 
         frames = [ w.ground, stem, leafR, leafL, stem_top ]
@@ -41,7 +41,7 @@ class TestLinks(WorldTestCase):
     def testLinksReplacement(self):
         w = World()
         bulb = RyRxJoint(name='bulb')
-        stem = Body(name='stem', mass=.1)
+        stem = Body(name='stem', mass=eye(6)*0.1)
         w.add_link(w.ground, bulb, stem)
 
         new_bulb = RzRxJoint(name='bulb')
