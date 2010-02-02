@@ -63,3 +63,7 @@ setup(
     package_data = {'arboris':['doc']}
 )
 
+# run the tests at setup
+# we will later if we really want the output
+os.popen("python tests/TestSuite.py")
+# or os.system("python tests/TestSuite.py")
