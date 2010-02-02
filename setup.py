@@ -64,6 +64,6 @@ setup(
 )
 
 # run the tests at setup
-# we will later if we really want the output
+# we will see later if we really want the output
 os.popen("python tests/TestSuite.py")
 # or os.system("python tests/TestSuite.py")
