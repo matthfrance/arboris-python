@@ -61,29 +61,33 @@ Install the packaged stuff::
 
   sudo aptitude install python2.6-doc python-numpy python-numpy-doc ipython
 
+Installing compilation tools
+----------------------------
+
+::
+
+  sudo aptitude install build-essentials cmake
+
 Installing h5py
 ---------------
 
 Install hdf5 library and headers::
 
-    sudo aptitude install libhdf5-dev
+  sudo aptitude install libhdf5-serial-dev python2.6-dev
 
 Download, compile and install the python bindings (h5py)::
 
-    wget http://h5py.googlecode.com/files/h5py-1.2.1.tar.gz
-    tar -xzf h5py-1.2.1.tar.gz
-    cd h5py-1.2.1
-    python setup.py build
-    python setup.py install --prefix=/home/seb/.local
+  cd /tmp
+  wget http://h5py.googlecode.com/files/h5py-1.2.1.tar.gz
+  tar -xzf h5py-1.2.1.tar.gz
+  cd h5py-1.2.1
+  python setup.py build
+  python setup.py install --prefix=~/.local
 
 Installing arboris-python
 -------------------------
 
 unzip, go in the new directory, then run::
-
-  sudo python setup.py install 
-
-or, if you prefer to install it in your home::
 
   python setup.py install --user
 
@@ -96,11 +100,6 @@ Installing OpenSceneGraph
 OpenSceneGraph 2.8 is packaged::
 
   sudo aptitude install libopenscenegraph-dev openscenegraph openscenegraph-doc
-
-.. note::
-  It seems that osgswig is incompatible with the version shiped with 
-  ubuntu (2.8.1-1). You might install the 2.8.2 from source instead, 
-  as explained in the following section.
 
 ...from source
 ~~~~~~~~~~~~~~
@@ -121,35 +120,55 @@ compile and install (warning, the compilation takes lots of memory and time)::
   sudo make install
   TODO: how to check everything was fine?
 
-
 Installing osgswig
 ------------------
 
 Install OpenSceneGraph python bindings from sources (inspired by 
 `this wiki page <http://code.google.com/p/osgswig/wiki/BuildInstructions>`_)::
 
-  sudo aptitude install swig
+  sudo aptitude install swig python-dev
   svn checkout -r207 http://osgswig.googlecode.com/svn/trunk/ osgswig
   cd osgswig
   mkdir build
   cd build
-  ccmake .. -DCMAKE_BUILD_TYPE=Release
+  cmake .. -DCMAKE_BUILD_TYPE=Release
   make
-  cp -r lib/python/osgswig-0.9.1/* /home/seb/.local/lib/python2.6/site-packages/
+  cp -r lib/python/osgswig-0.9.1/* ~/.local/lib/python2.6/site-packages/
 
 Don't worry about the hundreds of warnings during the compilation.
 
 Installing cvxmod
 -----------------
 
-install cvxopt from ubuntu and cvxmod from sources::
+Install cvxopt from ubuntu and cvxmod from sources::
 
   sudo aptitude install python-cvxopt
   cd /tmp/
   wget http://cvxmod.net/dist/cvxmod-0.4.6.tar.gz
   tar xzf cvxmod-0.4.6.tar.gz
   cd cvxmod-0.4.6/
-  sudo python setup.py install
+  python setup.py install --prefix=~/.local
+
+
+For Mac OS 10.6 (Snow Leopard)
+==============================
+
+Installing dependancies
+-----------------------
+
+Mac OS ships with python 2.5, 2.6 and numpy pre-installed. The other
+packages can be easily installed using  `macports <http://www.macports.org>`_.
+
+::
+
+    sudo port install py26-h5py py26-ipython py26-matplotlib osgswig-devel python-cvxmod 
+
+Installing arboris-python
+-------------------------
+
+unzip, go in the new directory, then run::
+
+  python2.6 setup.py install --user
 
 
 For windows

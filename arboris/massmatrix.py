@@ -6,19 +6,29 @@ __author__ = ("Sébastien BARTHÉLEMY <barthelemy@crans.org>")
 
 import homogeneousmatrix as Hg
 from numpy import diag, eye, dot, array
-from numpy.linalg import eig, det
+from numpy.linalg import eig, eigvals, det, norm
 
 tol=1e-9
 
-def ismassmatrix(M, tol=tol):
-    return True #TODO
+def ismassmatrix(M, tol=tol, semi=False):
+    """Check whether M is a valid mass matrix.
 
-def checkismassmatrix(M, tol=tol):
+    Return ``True`` if M is correctly shaped and symmetric positive
+    definite.
+
+    When ``semi`` is set to ``True``, positive *semi*-definite matrices
+    are also considered valid.
+
     """
-    Raise an error if input is not a mass matrix
-    """
-    if not ismassmatrix(M, tol):
-        raise ValueError("{M} is not a mass matrix".format(M=M))
+    common = M.shape == (6,6) and norm(M-M.T) <= tol and \
+            (M[3:6,3:6] == M[3,3]*eye(3)).all()
+    if not common:
+        print (M[3:6,3:6] == M[3,3]*eye(3))
+        print norm(M-M.T)
+    if semi:
+        return common and (eigvals(M)>=0.).all()
+    else:
+        return common and (eigvals(M)>0.).all()
 
 def transport(M, H):
     """Transport (express) the mass matrix into another frame.
@@ -87,12 +97,12 @@ def principalframe(M):
     H[0:3,0:3] = R
     return H
 
-def box(lengths, mass):
+def box(half_extents, mass):
     """Mass matrix of an homogeneous parallelepiped.
     
     **Example:**
     
-    >>> box((4.,8.,12.), 3.)
+    >>> box((2.,4.,6.), 3.)
     array([[ 52.,   0.,   0.,   0.,   0.,   0.],
            [  0.,  40.,   0.,   0.,   0.,   0.],
            [  0.,   0.,  20.,   0.,   0.,   0.],
@@ -101,10 +111,10 @@ def box(lengths, mass):
            [  0.,   0.,   0.,   0.,   0.,   3.]])
     
     """
-    (x, y, z) = lengths
-    Ix = mass/12.*(y**2+z**2)
-    Iy = mass/12.*(x**2+z**2)
-    Iz = mass/12.*(x**2+y**2)
+    (x, y, z) = half_extents
+    Ix = mass/3.*(y**2+z**2)
+    Iy = mass/3.*(x**2+z**2)
+    Iz = mass/3.*(x**2+y**2)
     return diag( (Ix, Iy, Iz, mass, mass, mass) )
 
 

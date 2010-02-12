@@ -5,10 +5,10 @@
 __author__ = ("Sébastien BARTHÉLEMY <barthelemy@crans.org>")
 
 from abc import ABCMeta, abstractmethod
-from numpy import array, zeros, eye, dot, hstack, diag
-from numpy.linalg import solve, eigvals
-import homogeneousmatrix as Hg
-from core import SubFrame, Constraint, Shape, NamedObject
+from numpy import array, zeros, eye, dot, hstack, diag, logical_and
+from numpy.linalg import solve, eigvals, pinv
+import arboris.homogeneousmatrix as Hg
+from arboris.core import MovingSubFrame, Constraint, Shape, NamedObject, World
 
 point_contact_proximity = 0.02
 joint_limits_proximity = 0.01
@@ -64,32 +64,31 @@ class JointLimits(Constraint):
     def ndol(self):
         return 1
 
-    def update(self):
+    def update(self, dt):
         self._pos0 = self._joint.gpos
+        self._force[:] = 0.
     
     def is_active(self):
         return (self._pos0-self._min<self._proximity) or \
                 (self._max-self._pos0<self._proximity)    
 
     def solve(self, vel, admittance, dt):
-        pred = self._pos0 + dt*vel
+        pred = self._pos0 + dt*(vel - dot(admittance,  self._force))
+        prev_force = self._force.copy()
         # pos = self._pos0 + dt*(vel + admittance*dforce)
         if (pred <= self._min):
             # the min limit is violated, we want pos == min
-            dforce = solve(admittance, (self._min - pred)/dt)
-            self._force += dforce
-
+            self._force = dot(pinv(admittance), (self._min - pred)/dt)
+            dforce = self._force - prev_force
         elif (self._max <= pred):
             #the max limit is violated, we want pos == max
-            dforce = solve(admittance, (self._max - pred)/dt)
-            self._force += dforce
-
+            self._force = dot(pinv(admittance), (self._max - pred)/dt)
+            dforce = self._force - prev_force
         else:
             # the joint is within its limits, we ensure the 
             # generalized force is zero
             dforce = -self._force
             self._force[:] = 0.
-
         return dforce
 
 class BallAndSocketConstraint(Constraint):
@@ -164,7 +163,7 @@ class BallAndSocketConstraint(Constraint):
     def ndol(self):
         return 3
 
-    def update(self):
+    def update(self, dt):
         r"""
         Compute the predicted relative position error between the socket and
         ball centers, `p_{01}(t)` and save it in ``self._pos0``.
@@ -235,7 +234,7 @@ class BallAndSocketConstraint(Constraint):
         array([ 0.,  0.,  0.])
 
         """
-        dforce = solve(-admittance, vel + self._pos0/dt)
+        dforce = -dot(pinv(admittance), vel + self._pos0/dt)
         self._force += dforce
         return dforce
 
@@ -252,18 +251,13 @@ class PointContact(Constraint):
       Gauss-Seidel algorithm computes contact forces compatible 
       with the contact model.
 
-    The :class:`PointContact` implements the first step by calling a
+    The :class:`PointContact` class implements the first step by calling a
     ``collision_solver`` function. Implementing the second one is the 
     responsability of a daughter class.
 
     """
 
     def __init__(self, shapes, collision_solver, proximity):
-        r"""
-        .. todo:
-            find the good ``collision_solver`` automatically according
-            to the ``shapes`` pair
-        """
         assert isinstance(shapes[0], Shape)
         assert isinstance(shapes[1], Shape)
         if collision_solver is None:
@@ -271,15 +265,15 @@ class PointContact(Constraint):
             from collisions import choose_solver
             (shapes, collision_solver) = choose_solver(shapes[0], shapes[1])
         self._shapes = shapes
-        self._frames = (SubFrame(shapes[0].frame.body),
-                        SubFrame(shapes[1].frame.body))
+        self._frames = (MovingSubFrame(shapes[0].frame.body),
+                        MovingSubFrame(shapes[1].frame.body))
         self._collision_solver = collision_solver
         self._proximity = proximity
 
     def init(self, world):
         pass
 
-    def update(self):
+    def update(self, dt):
         r"""
         This method calls the collision solver and updates the constraint
         status and the contact frames poses accordingly.
@@ -287,14 +281,16 @@ class PointContact(Constraint):
         the `z`-axis
         """
         (sdist, H_gc0, H_gc1) = self._collision_solver(self._shapes)
-        #self._frames[0].bpose = dot(self._shapes[0].frame.bpose, H_s0c0)
-        #self._frames[1].bpose = dot(self._shapes[1].frame.bpose, H_s1c1)
         H_b0g = Hg.inv(self._shapes[0].frame.body.pose)
         H_b1g = Hg.inv(self._shapes[1].frame.body.pose)
-        self._frames[0]._bpose = dot(H_b0g, H_gc0) #TODO: use a set method?
-        self._frames[1]._bpose = dot(H_b1g, H_gc1)
-        self._is_active = (sdist < self._proximity)
+        self._frames[0].bpose = dot(H_b0g, H_gc0)
+        self._frames[1].bpose = dot(H_b1g, H_gc1)
+        H_c0c1 = dot(Hg.inv(H_gc0), H_gc1)
+        dsdist = (dot(Hg.adjoint(H_c0c1)[5,:], self._frames[1].twist)
+                  -self._frames[0].twist[5])
+        self._is_active = (sdist + dsdist*dt < self._proximity)
         self._sdist = sdist
+        self._force[:] = 0.
 
     def is_active(self):
         return self._is_active
@@ -328,7 +324,7 @@ class SoftFingerContact(PointContact):
     penetrate each other.
 
     We consider here point contacts with a Coulomb friction model,
-    extended to involve moment resisting to torsion, as described in 
+    extended to involve torque resisting to torsion, as described in 
     Liu2003_ and Trinkle2001_ and often denoted as "soft finger
     contact". The contact wrench can be decomposed as:
 
@@ -387,7 +383,7 @@ class SoftFingerContact(PointContact):
         \frac{m_z}{e_p^2} \\ \frac{f_x}{e_x^2} \\ \frac{f_y}{e_y^2}
         \end{bmatrix}
         \text{ and }
-        s = \frac{
+        s = -\frac{
             \sqrt{e_p^2 \cdot \omega_z + e_x^2 \cdot v_x + e_y^2 \cdot v_y}}{
             \mu \cdot f_z}
 
@@ -435,12 +431,6 @@ class SoftFingerContact(PointContact):
         H_01 = dot(Hg.inv(self._frames[0].pose), self._frames[1].pose)
         return (dot(Hg.adjoint(H_01)[2:6,:], self._frames[1].jacobian)
                 -self._frames[0].jacobian[2:6,:])
-
-
-    def update(self):
-        self._force[:] = 0.
-        PointContact.update(self)
-    
     
     def solve(self, vel, admittance, dt):
         r"""
@@ -740,7 +730,7 @@ class SoftFingerContact(PointContact):
             \end{bmatrix}
             \begin{bmatrix}
             I_{3 \times 3} & -Y_c/y_n \\
-            0_{1 \times 3} & y_n
+            0_{1 \times 3} & y_n^{-1}
             \end{bmatrix}
         
         injecting this last expression into, it can be shown that `s` is
@@ -768,22 +758,27 @@ class SoftFingerContact(PointContact):
                     & Y_t - Y_c\;Y_c^T/y_n
             \end{bmatrix}
 
-        where the following values has been introduced
+        where the following values have been introduced
 
         .. math::
             \beta &= 
             \begin{bmatrix}
                 I_{3 \times 3} & -Y_c/y_n \\
                 \end{bmatrix} \alpha \\
-            a &= \mu y_n \alpha_3 \\
+            a &= \mu/y_n \alpha_3 \\
             b &= \frac{\mu}{y_n} Y_c
 
+        `s` should be real and negative (in order to ensure that the friction
+        force opposes motion). If `B` has several real negative eigen-values,
+        we choose the smallest, which leads to the smaller friction forces.
+
         .. note::
-            the full math is available as a pdf, within this document, `\beta`
+            the full math is available as a pdf, within that document, `\beta`
             is denoted `\hat{\alpha}`.
 
         """
-        if self._sdist + dt*vel[3]>0:
+        vel_no_force = vel - dot(admittance, self._force)
+        if self._sdist + dt*vel_no_force[3] > 0:
             # if there is no contact, the contact force should be 0
             dforce = -self._force
             self._force[:] = 0.
@@ -797,11 +792,11 @@ class SoftFingerContact(PointContact):
             # friction model. 
             
             # First, try with static friction: zero tangent velocity
-            dforce = solve(-admittance, 
+            dforce = dot(-pinv(admittance), 
                            hstack((vel[0:3], vel[3]+self._sdist/dt)))
             force = self._force + dforce
 
-            if sum((force[0:3]/self._eps)**2) <= (force[3]/self._mu)**2:
+            if sum((force[0:3]/self._eps)**2) <= (force[3]*self._mu)**2:
                 # the elliptic dry friction law is respected.
                 self._force = force
                 return dforce
@@ -813,25 +808,26 @@ class SoftFingerContact(PointContact):
                 alpha[3] += self._sdist/dt
                 Y_c = admittance[0:3,3]
                 y_n = admittance[3,3]
-                Y_t = admittance[0:3,0:3] - dot(Y_c, Y_c.T)/y_n
+                Y_t = admittance[0:3,0:3]
                 beta = alpha[0:3] - alpha[3]/y_n*Y_c
-                a = self._mu * y_n * alpha[3]
+                a = self._mu/y_n * alpha[3]
                 b = self._mu/y_n * Y_c
                 B = zeros((6,6))
                 E = diag(self._eps**2)
-                B[3:6,3:6] = dot(E, Y_t - dot(Y_c, Y_c.T)/y_n)
-                B[0:3,0:3] = dot(E, B[3:6,3:6] + 2/a*dot(beta,b.T))
-                B[0:3,3:6] = dot(E ,dot(beta,beta.T)/(a**2))
-                B[3:6,0:3] = dot(b,b.T)- dot(E, diag(self._eps**-2))
+                Y_that = Y_t - dot(Y_c, Y_c.T)/y_n
+                B[3:6,3:6] = dot(E, Y_that)
+                B[0:3,0:3] = dot(E, Y_that + 2/a*dot(beta,b.T))
+                B[0:3,3:6] = -dot(E ,dot(beta,beta.T)/(a**2))
+                B[3:6,0:3] = dot(E, dot(b,b.T)) - eye(3)
 
                 # s is the real part of the eigenvalue with the smallest 
                 # imaginary par within those with a positive real part
                 S = eigvals(B)
-                S = S[S.real >= 0]
-                ind = S.imag.argsort()
-                s = S[ind[0]].real
-                s = min(s, 1e10) #TODO: throw exception when s>=1e10
-
+                S = S[logical_and(S.imag == 0, S.real <= 0)]
+                if len(S)==0:
+                    s = -1e10 #TODO: log when len(S)==0
+                else:
+                    s = max(min(S), -1e10) #TODO: log when |s|>=1e10
                 prev_force = self._force.copy()
                 A = admittance.copy()
                 A[0:3,0:3] -= s*diag(self._eps**-2)
@@ -839,3 +835,45 @@ class SoftFingerContact(PointContact):
                 dforce = self._force - prev_force
                 return dforce
         
+
+def get_all_contacts(world, contact_class=None, **args):
+    """Init all the possible collisions in world.
+
+    :param world: the world where the contacts will be looked for.
+    :type world: arboris.core.World
+    :param contact_class: a class describing the contacts that will be
+         created. Defaults to arboris.constraints.SoftFingerContact
+    :type contact_class: a subclass of arboris.constraints.PointContact
+    :rparam: a list of the new contacts.
+    :rtype: list
+
+    All additionnal input arguments are passed to the ``contact_class``
+    constructor.
+
+    Note: it is your responsability to register these new contact to the
+    world.
+
+    """
+    assert isinstance(world, World)
+    if contact_class is None:
+        import arboris.constraints
+        contact_class = arboris.constraints.SoftFingerContact
+    else:
+        assert issubclass(contact_class, arboris.constraints.PointContact)
+    contacts = []
+    shapes = tuple(world.itershapes())
+    for i in range(len(shapes)):
+        s0 = shapes[i]
+        for j in range(i+1, len(shapes)):
+            s1 = shapes[j]
+            if s0.frame.body is s1.frame.body:
+                # Contact between two rigidly linked bodies would be 
+                # pointless.
+                pass 
+            else:
+                try:
+                    contacts.append(contact_class((s0, s1), **args))
+                except NotImplementedError:
+                    #The collison detection is impossible.
+                    pass 
+    return contacts

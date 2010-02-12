@@ -169,7 +169,7 @@ class Joint(RigidMotion, NamedObject):
 
     @abstractproperty
     def ndof(self):
-        """Number of degrees of freedom.
+        """Number of degrees of freedom of the joint.
         """
         pass
 
@@ -194,13 +194,20 @@ class Joint(RigidMotion, NamedObject):
 
     @abstractproperty
     def jacobian(self):
+        r"""Jacobian of the joint relative position.
+
+        Return the matrix `J` such that `\twist[1]_{1/0} = J \nu`.
+        Or, with numpy ntation, ``j.twist == dot(j.jacobian, j.gvel)``.
+
+        This matrix generally changes with the joint generalized position.
+        """
         pass
 
     @abstractproperty
     def djacobian(self):
         pass
 
-    @abstractproperty
+    @abstractmethod
     def integrate(self, gvel, dt):
         pass
 
@@ -209,6 +216,16 @@ class LinearConfigurationSpaceJoint(Joint):
     """
     Joints whose configuration space is diffeomorph to R^ndof.
     """
+    def __init__(self, gpos=None, gvel=None, name=None):
+        if gpos is None:
+            self.gpos = zeros(self.ndof)
+        else:
+            self.gpos = array(gpos).reshape((self.ndof))
+        if gvel is None:
+            self.gvel = zeros(self.ndof)
+        else:
+            self.gvel = array(gvel).reshape((self.ndof))
+        Joint.__init__(self, name)
 
     def integrate(self, gvel, dt):
         self.gvel = gvel
@@ -263,7 +280,7 @@ class Constraint(NamedObject):
     def ndol(self):
         """Number of degrees of "liaison" 
         
-        In french: *nombre de degrés de liaison*. This is equal to 6-ndof.
+        In french: *nombre de degrés de liaison*. This is equal to (6 - ndof).
         """
         pass
 
@@ -284,6 +301,7 @@ class Shape(NamedObject):
     """A generic class for geometric shapes used in collision detection
     """
     def __init__(self, frame, name=None):
+        assert isinstance(frame, Frame)
         self.frame = frame
         NamedObject.__init__(self, name)
 
@@ -325,7 +343,6 @@ class World(NamedObject):
         self._nleffects = array([]) # updated by self.update_dynamic()
         self._impedance = array([]) # updated by self.update_controller()
         self._admittance = array([]) # updated by self.update_controller()
-
 
     def iterbodies(self):
         """Iterate over all bodies, with a depth-first strategy."""
@@ -495,9 +512,8 @@ class World(NamedObject):
         if isinstance(obj, Body):
             pass
         elif isinstance(obj, Joint):
-            self.register(obj.frames[0])
-            self.register(obj.frames[1])
-        elif isinstance(obj, SubFrame):
+            raise ValueError('Joints should not be registered. Use add_link() instead.')
+        elif isinstance(obj, SubFrame) or isinstance(obj, MovingSubFrame):
             if not obj in self._subframes:
                 self._subframes.append(obj)
         elif isinstance(obj, Shape):
@@ -820,7 +836,7 @@ class World(NamedObject):
           `\pre[c]f`. At each iteration the force is 
           updated by `\Delta\pre[c]f`
 
-        - envetually add each active constraint generalized force to
+        - eventually add each active constraint generalized force to
           world :attr:`~arboros.core.World._gforce` property.
         
         TODO: add an example.
@@ -830,18 +846,18 @@ class World(NamedObject):
         constraints = []
         ndol = 0
         for c in self._constraints:
-            c.update()
+            c.update(dt)
             if c.is_active():
                 c._dol = slice(ndol, ndol+c.ndol)
                 ndol = ndol + c.ndol
                 constraints.append(c)
-
         jac = zeros((ndol, self._ndof))
-        admittance = zeros((ndol, ndol))
+        gforce = self._gforce.copy()
         for c in constraints:
             jac[c._dol,:] = c.jacobian
+            gforce += c.gforce
         vel = dot(jac, dot(self._admittance, 
-                           dot(self._mass, self._gvel/dt) + self._gforce))
+                           dot(self._mass, self._gvel/dt) + gforce))
         admittance = dot(jac, dot(self._admittance, jac.T))
 
         k=0
@@ -897,11 +913,8 @@ class World(NamedObject):
             j.integrate(self._gvel[j.dof], dt)
         self._current_time += dt
 
-    def finish(self):
-        pass
 
-
-class SubFrame(NamedObject, Frame):
+class _SubFrame(NamedObject, Frame):
 
     def __init__(self, body, bpose=None, name=None):
         """Create a frame rigidly fixed to a body. 
@@ -921,19 +934,16 @@ class SubFrame(NamedObject, Frame):
         >>> f = SubFrame(b, ones((4,4)))
         Traceback (most recent call last):
             ...
-        ValueError: [[ 1.  1.  1.  1.]
-         [ 1.  1.  1.  1.]
-         [ 1.  1.  1.  1.]
-         [ 1.  1.  1.  1.]] is not an homogeneous matrix
+        AssertionError
 
         """
         if bpose is None:
             bpose = eye(4)
         
         NamedObject.__init__(self, name)
-        Hg.checkishomogeneousmatrix(bpose)
+        assert Hg.ishomogeneousmatrix(bpose)
         self._bpose = bpose
-        if not(isinstance(body,Body)):
+        if not(isinstance(body, Body)):
             raise ValueError("The ``body`` argument must be an instance of the ``Boby`` class")
         else:
             self._body = body
@@ -959,10 +969,26 @@ class SubFrame(NamedObject, Frame):
     def body(self):
         return self._body
 
+    @abstractproperty
+    def bpose(self):
+        pass
+
+
+class SubFrame(_SubFrame):
     @property
     def bpose(self):
         return self._bpose.copy()
 
+
+class MovingSubFrame(_SubFrame):
+    @property
+    def bpose(self):
+        return self._bpose.copy()
+
+    @bpose.setter
+    def bpose(self, bpose):
+        assert Hg.ishomogeneousmatrix(bpose)
+        self._bpose[:] = bpose
 
 class Body(NamedObject, Frame):
 
@@ -1226,59 +1252,24 @@ class Body(NamedObject, Frame):
             j._frame1.body.update_dynamic(child_pose, child_jac, child_djac, 
                                           child_twist)
 
-class ObservableWorld(World):
 
-    def __init__(self, *positional_args, 
-                 **keyword_args):
-        World.__init__(self, *positional_args, **keyword_args)
-        self.observers = []
-
-    def register(self, obj):
-        World.register(self, obj)
-        for obs in self.observers:
-            assert isinstance(obs, WorldObserver)
-            obs.register(obj)
-
-    def init(self):
-        World.init(self)
-        for obs in self.observers:
-            assert isinstance(obs, WorldObserver)
-            obs.init()
-
-    def _update_observers(self, dt):
-        for obs in self.observers:
-            assert isinstance(obs, WorldObserver)
-            obs.update(dt)
-
-    def integrate(self, dt):
-        self._update_observers(dt)
-        World.integrate(self, dt)
-
-    def finish(self):
-         for obs in self.observers:
-            assert isinstance(obs, WorldObserver)
-            obs.finish()
-
-
-class WorldObserver(object):
+class Observer(object):
     __metaclass__ = ABCMeta
-
-    def register(self, obj):
+    
+    @abstractmethod
+    def init(self, world, timeline):
         pass
 
     @abstractmethod
-    def init(self):
+    def update(self, dt):
         pass
 
     @abstractmethod
-    def update(self):
-        pass
-
     def finish(self):
         pass
 
 
-def simulate(world, timeline):
+def simulate(world, timeline, observers=()):
     """Run a full simulation, 
 
     :param world: the world to be simulated
@@ -1298,10 +1289,15 @@ def simulate(world, timeline):
         pass #TODO: use logger to warn user of possible problem
     world._current_time = timeline[0]
     world.init()
+    for obs in observers:
+        obs.init(world, timeline)
     for next_time in timeline[1:]:
         dt = next_time - world._current_time
         world.update_dynamic()
         world.update_controllers(dt)
         world.update_constraints(dt)
+        for obs in observers:
+            obs.update(dt)
         world.integrate(dt)
-    world.finish()
+    for obs in observers:
+        obs.finish()
