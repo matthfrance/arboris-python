@@ -12,17 +12,6 @@ class FreeJoint(Joint):
     """Free joint (6-dof)
     """
     def __init__(self, gpos=None, gvel=None, name=None):
-        """
-        example:
-        >>> j = FreeJoint()
-        >>> j.gpos
-        array([[ 1.,  0.,  0.,  0.],
-               [ 0.,  1.,  0.,  0.],
-               [ 0.,  0.,  1.,  0.],
-               [ 0.,  0.,  0.,  1.]])
-        >>> j.gvel
-        array([ 0.,  0.,  0.,  0.,  0.,  0.])
-        """
         if gpos is None:
             gpos = eye(4)
         if gvel is None:
@@ -242,64 +231,18 @@ class RzJoint(LinearConfigurationSpaceJoint):
 
     @property
     def pose(self):
-        """
-        >>> j = RzJoint(gpos = 3.14/2., gvel = 1.)
-        >>> j.pose
-        array([[  7.96326711e-04,  -9.99999683e-01,   0.00000000e+00,
-                  0.00000000e+00],
-               [  9.99999683e-01,   7.96326711e-04,   0.00000000e+00,
-                  0.00000000e+00],
-               [  0.00000000e+00,   0.00000000e+00,   1.00000000e+00,
-                  0.00000000e+00],
-               [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
-                  1.00000000e+00]])
-        """
         return homogeneousmatrix.rotz(self.gpos[0])
 
     @property
     def ipose(self):
-        """
-        >>> j = RzJoint(gpos = 3.14/2., gvel = 1.)
-        >>> j.ipose
-        array([[  7.96326711e-04,   9.99999683e-01,   0.00000000e+00,
-                  0.00000000e+00],
-               [ -9.99999683e-01,   7.96326711e-04,   0.00000000e+00,
-                  0.00000000e+00],
-               [  0.00000000e+00,   0.00000000e+00,   1.00000000e+00,
-                  0.00000000e+00],
-               [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
-                  1.00000000e+00]])
-
-        """
         return homogeneousmatrix.rotz(-self.gpos[0])
 
     @property
     def jacobian(self):
-        """
-        >>> j = RzJoint(gpos = 3.14/2., gvel = 1.)
-        >>> j.jacobian
-        array([[ 0.],
-               [ 0.],
-               [ 1.],
-               [ 0.],
-               [ 0.],
-               [ 0.]])
-        """
         return array([[0.], [0.], [1.], [0.], [0.], [0.]])
 
     @property
     def djacobian(self):
-        """
-        >>> j = RzJoint(gpos = 3.14/2., gvel = 1.)
-        >>> j.djacobian
-        array([[ 0.],
-               [ 0.],
-               [ 0.],
-               [ 0.],
-               [ 0.],
-               [ 0.]])
-
-        """
         return zeros((6,1))
 
 class RyJoint(LinearConfigurationSpaceJoint):

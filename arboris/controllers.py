@@ -9,22 +9,7 @@ import homogeneousmatrix
 from joints import LinearConfigurationSpaceJoint
 
 class WeightController(Controller):
-    """A contoller which applies weight to joints.
-
-    **Test:**: 
-    >>> from arboris.core import simplearm
-    >>> w = simplearm()
-    >>> joints = w.getjoints()
-    >>> joints['Shoulder'].gpos[0] = 3.14/4
-    >>> joints['Elbow'].gpos[0] = 3.14/4
-    >>> joints['Wrist'].gpos[0] = 3.14/4
-    >>> c = WeightController()
-    >>> w.register(c)
-    >>> w.init()
-    >>> w.update_dynamic() #TODO change for update_kinematic
-    >>> (gforce, impedance) = c.update() #TODO: test!
-    
-    """
+    """A contoller which applies weight to joints."""
     def __init__(self, gravity=-9.81, name=None):
         self.gravity = float(gravity)
         Controller.__init__(self, name=name)

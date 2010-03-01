@@ -13,7 +13,7 @@ class ConstraintsTestCase(BaseTest):
 
     def testJoinLimits(self):
         world = simplearm()
-        a = WeightController(world)
+        a = WeightController()
         world.register(a)
         joints = world.getjoints()
         c = JointLimits(joints['Shoulder'], -3.14/2, 3.14/2)
@@ -21,11 +21,11 @@ class ConstraintsTestCase(BaseTest):
         joints['Shoulder'].gpos[0] = 3.14/2 - 0.1
         time = arange(0., 0.1, 1e-3)
         simulate(world, time)
-        self.assertTrue(3.14/2 > joints['Shoulder'].gpos[0])
+        self.assertTrue(3.14/2 >= joints['Shoulder'].gpos[0])
         joints['Shoulder'].gpos[0] = -3.14/2 + 0.1
         time = arange(0., 0.1, 1e-3)
         simulate(world, time)
-        self.assertTrue(-3.14/2 < joints['Shoulder'].gpos[0])
+        self.assertTrue(-3.14/2 <= joints['Shoulder'].gpos[0])
 
     def testBallAndSocketConstraint(self):
         b0 = Body(mass=eye(6))
@@ -34,7 +34,7 @@ class ConstraintsTestCase(BaseTest):
         b1 = Body(mass=eye(6))
         w.add_link(b0, FreeJoint(), b1)
         w.init()
-        ctrl =  WeightController(w)
+        ctrl =  WeightController()
         w.register(ctrl)
         c0 = BallAndSocketConstraint(frames=(w.ground, b0))
         w.register(c0)
@@ -84,3 +84,4 @@ ts = unittest.TestSuite()
 ts.addTest(ConstraintsTestCase('testJoinLimits'))
 ts.addTest(ConstraintsTestCase('testBallAndSocketConstraint'))
 ts.addTest(ConstraintsTestCase('testSoftFingerContact'))
+

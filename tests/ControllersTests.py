@@ -12,7 +12,7 @@ from arboris.joints import LinearConfigurationSpaceJoint
 class ControllersTestCase(BaseTest):
     def testConstruction(self):
         w1 = World()
-        wc = WeightController(w1)
+        wc = WeightController()
         j = w1.getjoints()
         pdc = ProportionalDerivativeController(j)
 
@@ -22,7 +22,7 @@ class ControllersTestCase(BaseTest):
         joints['Shoulder'].gpos[0] = 3.14/4
         joints['Elbow'].gpos[0] = 3.14/4
         joints['Wrist'].gpos[0] = 3.14/4
-        c = WeightController(w)
+        c = WeightController()
         w.register(c)
         w.init()
         w.update_dynamic() #TODO change for update_kinematic
