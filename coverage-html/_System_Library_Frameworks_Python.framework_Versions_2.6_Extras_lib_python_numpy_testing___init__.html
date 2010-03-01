@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/testing/__init__</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/testing/__init__</b> :
+            <span class='pc_cov'>100%</span>
+        </h1>
+        <h2 class='stats'>
+            8 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>8 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>0 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='pln'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='pln'>4</p>
+<p class='pln'>5</p>
+<p class='pln'>6</p>
+<p class='pln'>7</p>
+<p class='pln'>8</p>
+<p class='stm run hide_run'>9</p>
+<p class='pln'>10</p>
+<p class='stm run hide_run'>11</p>
+<p class='stm run hide_run'>12</p>
+<p class='stm run hide_run'>13</p>
+<p class='stm run hide_run'>14</p>
+<p class='stm run hide_run'>15</p>
+<p class='stm run hide_run'>16</p>
+<p class='stm run hide_run'>17</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='pln'><span class='str'>&quot;&quot;&quot;Common test support for all numpy test scripts.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>This single module should provide all the common functionality for numpy tests</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>in a single location, so that test scripts can just import it and work right</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>away.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'>#import unittest</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>unittest</span> <span class='key'>import</span> <span class='nam'>TestCase</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>decorators</span> <span class='key'>as</span> <span class='nam'>dec</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>utils</span> <span class='key'>import</span> <span class='op'>*</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>parametric</span> <span class='key'>import</span> <span class='nam'>ParametricTestCase</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>numpytest</span> <span class='key'>import</span> <span class='op'>*</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>nosetester</span> <span class='key'>import</span> <span class='nam'>NoseTester</span> <span class='key'>as</span> <span class='nam'>Tester</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>nosetester</span> <span class='key'>import</span> <span class='nam'>run_module_suite</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>test</span> <span class='op'>=</span> <span class='nam'>Tester</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>test</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

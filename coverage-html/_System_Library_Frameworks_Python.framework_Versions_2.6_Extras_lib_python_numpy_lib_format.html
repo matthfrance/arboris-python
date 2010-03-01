@@ -1,0 +1,1017 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/lib/format</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/lib/format</b> :
+            <span class='pc_cov'>9%</span>
+        </h1>
+        <h2 class='stats'>
+            153 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>14 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>139 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='pln'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='pln'>4</p>
+<p class='pln'>5</p>
+<p class='pln'>6</p>
+<p class='pln'>7</p>
+<p class='pln'>8</p>
+<p class='pln'>9</p>
+<p class='pln'>10</p>
+<p class='pln'>11</p>
+<p class='pln'>12</p>
+<p class='pln'>13</p>
+<p class='pln'>14</p>
+<p class='pln'>15</p>
+<p class='pln'>16</p>
+<p class='pln'>17</p>
+<p class='pln'>18</p>
+<p class='pln'>19</p>
+<p class='pln'>20</p>
+<p class='pln'>21</p>
+<p class='pln'>22</p>
+<p class='pln'>23</p>
+<p class='pln'>24</p>
+<p class='pln'>25</p>
+<p class='pln'>26</p>
+<p class='pln'>27</p>
+<p class='pln'>28</p>
+<p class='pln'>29</p>
+<p class='pln'>30</p>
+<p class='pln'>31</p>
+<p class='pln'>32</p>
+<p class='pln'>33</p>
+<p class='pln'>34</p>
+<p class='pln'>35</p>
+<p class='pln'>36</p>
+<p class='pln'>37</p>
+<p class='pln'>38</p>
+<p class='pln'>39</p>
+<p class='pln'>40</p>
+<p class='pln'>41</p>
+<p class='pln'>42</p>
+<p class='pln'>43</p>
+<p class='pln'>44</p>
+<p class='pln'>45</p>
+<p class='pln'>46</p>
+<p class='pln'>47</p>
+<p class='pln'>48</p>
+<p class='pln'>49</p>
+<p class='pln'>50</p>
+<p class='pln'>51</p>
+<p class='pln'>52</p>
+<p class='pln'>53</p>
+<p class='pln'>54</p>
+<p class='pln'>55</p>
+<p class='pln'>56</p>
+<p class='pln'>57</p>
+<p class='pln'>58</p>
+<p class='stm run hide_run'>59</p>
+<p class='pln'>60</p>
+<p class='stm run hide_run'>61</p>
+<p class='stm run hide_run'>62</p>
+<p class='pln'>63</p>
+<p class='pln'>64</p>
+<p class='stm run hide_run'>65</p>
+<p class='stm run hide_run'>66</p>
+<p class='pln'>67</p>
+<p class='stm run hide_run'>68</p>
+<p class='pln'>69</p>
+<p class='pln'>70</p>
+<p class='pln'>71</p>
+<p class='pln'>72</p>
+<p class='pln'>73</p>
+<p class='pln'>74</p>
+<p class='pln'>75</p>
+<p class='pln'>76</p>
+<p class='pln'>77</p>
+<p class='pln'>78</p>
+<p class='pln'>79</p>
+<p class='pln'>80</p>
+<p class='pln'>81</p>
+<p class='pln'>82</p>
+<p class='pln'>83</p>
+<p class='stm mis'>84</p>
+<p class='stm mis'>85</p>
+<p class='stm mis'>86</p>
+<p class='stm mis'>87</p>
+<p class='stm mis'>88</p>
+<p class='pln'>89</p>
+<p class='stm run hide_run'>90</p>
+<p class='pln'>91</p>
+<p class='pln'>92</p>
+<p class='pln'>93</p>
+<p class='pln'>94</p>
+<p class='pln'>95</p>
+<p class='pln'>96</p>
+<p class='pln'>97</p>
+<p class='pln'>98</p>
+<p class='pln'>99</p>
+<p class='pln'>100</p>
+<p class='pln'>101</p>
+<p class='stm mis'>102</p>
+<p class='stm mis'>103</p>
+<p class='stm mis'>104</p>
+<p class='stm mis'>105</p>
+<p class='stm mis'>106</p>
+<p class='stm mis'>107</p>
+<p class='stm mis'>108</p>
+<p class='stm mis'>109</p>
+<p class='stm mis'>110</p>
+<p class='pln'>111</p>
+<p class='stm run hide_run'>112</p>
+<p class='pln'>113</p>
+<p class='pln'>114</p>
+<p class='pln'>115</p>
+<p class='pln'>116</p>
+<p class='pln'>117</p>
+<p class='pln'>118</p>
+<p class='pln'>119</p>
+<p class='pln'>120</p>
+<p class='pln'>121</p>
+<p class='pln'>122</p>
+<p class='pln'>123</p>
+<p class='pln'>124</p>
+<p class='pln'>125</p>
+<p class='pln'>126</p>
+<p class='pln'>127</p>
+<p class='pln'>128</p>
+<p class='pln'>129</p>
+<p class='pln'>130</p>
+<p class='pln'>131</p>
+<p class='pln'>132</p>
+<p class='pln'>133</p>
+<p class='pln'>134</p>
+<p class='stm mis'>135</p>
+<p class='pln'>136</p>
+<p class='pln'>137</p>
+<p class='pln'>138</p>
+<p class='pln'>139</p>
+<p class='stm mis'>140</p>
+<p class='pln'>141</p>
+<p class='stm mis'>142</p>
+<p class='pln'>143</p>
+<p class='stm run hide_run'>144</p>
+<p class='pln'>145</p>
+<p class='pln'>146</p>
+<p class='pln'>147</p>
+<p class='pln'>148</p>
+<p class='pln'>149</p>
+<p class='pln'>150</p>
+<p class='pln'>151</p>
+<p class='pln'>152</p>
+<p class='pln'>153</p>
+<p class='pln'>154</p>
+<p class='pln'>155</p>
+<p class='pln'>156</p>
+<p class='stm mis'>157</p>
+<p class='stm mis'>158</p>
+<p class='stm mis'>159</p>
+<p class='stm mis'>160</p>
+<p class='stm mis'>161</p>
+<p class='stm mis'>162</p>
+<p class='pln'>163</p>
+<p class='pln'>164</p>
+<p class='pln'>165</p>
+<p class='pln'>166</p>
+<p class='stm mis'>167</p>
+<p class='pln'>168</p>
+<p class='stm mis'>169</p>
+<p class='stm mis'>170</p>
+<p class='pln'>171</p>
+<p class='stm run hide_run'>172</p>
+<p class='pln'>173</p>
+<p class='pln'>174</p>
+<p class='pln'>175</p>
+<p class='pln'>176</p>
+<p class='pln'>177</p>
+<p class='pln'>178</p>
+<p class='pln'>179</p>
+<p class='pln'>180</p>
+<p class='pln'>181</p>
+<p class='stm mis'>182</p>
+<p class='stm mis'>183</p>
+<p class='stm mis'>184</p>
+<p class='pln'>185</p>
+<p class='stm mis'>186</p>
+<p class='stm mis'>187</p>
+<p class='stm mis'>188</p>
+<p class='pln'>189</p>
+<p class='pln'>190</p>
+<p class='pln'>191</p>
+<p class='pln'>192</p>
+<p class='stm mis'>193</p>
+<p class='stm mis'>194</p>
+<p class='stm mis'>195</p>
+<p class='stm mis'>196</p>
+<p class='stm mis'>197</p>
+<p class='stm mis'>198</p>
+<p class='stm mis'>199</p>
+<p class='stm mis'>200</p>
+<p class='pln'>201</p>
+<p class='stm run hide_run'>202</p>
+<p class='pln'>203</p>
+<p class='pln'>204</p>
+<p class='pln'>205</p>
+<p class='pln'>206</p>
+<p class='pln'>207</p>
+<p class='pln'>208</p>
+<p class='pln'>209</p>
+<p class='pln'>210</p>
+<p class='pln'>211</p>
+<p class='pln'>212</p>
+<p class='pln'>213</p>
+<p class='pln'>214</p>
+<p class='pln'>215</p>
+<p class='pln'>216</p>
+<p class='pln'>217</p>
+<p class='pln'>218</p>
+<p class='pln'>219</p>
+<p class='pln'>220</p>
+<p class='pln'>221</p>
+<p class='pln'>222</p>
+<p class='pln'>223</p>
+<p class='pln'>224</p>
+<p class='pln'>225</p>
+<p class='pln'>226</p>
+<p class='pln'>227</p>
+<p class='pln'>228</p>
+<p class='pln'>229</p>
+<p class='pln'>230</p>
+<p class='pln'>231</p>
+<p class='pln'>232</p>
+<p class='stm mis'>233</p>
+<p class='stm mis'>234</p>
+<p class='stm mis'>235</p>
+<p class='stm mis'>236</p>
+<p class='stm mis'>237</p>
+<p class='stm mis'>238</p>
+<p class='stm mis'>239</p>
+<p class='stm mis'>240</p>
+<p class='stm mis'>241</p>
+<p class='pln'>242</p>
+<p class='pln'>243</p>
+<p class='pln'>244</p>
+<p class='pln'>245</p>
+<p class='pln'>246</p>
+<p class='pln'>247</p>
+<p class='pln'>248</p>
+<p class='stm mis'>249</p>
+<p class='stm mis'>250</p>
+<p class='stm mis'>251</p>
+<p class='stm mis'>252</p>
+<p class='stm mis'>253</p>
+<p class='stm mis'>254</p>
+<p class='stm mis'>255</p>
+<p class='stm mis'>256</p>
+<p class='stm mis'>257</p>
+<p class='stm mis'>258</p>
+<p class='stm mis'>259</p>
+<p class='stm mis'>260</p>
+<p class='stm mis'>261</p>
+<p class='pln'>262</p>
+<p class='pln'>263</p>
+<p class='stm mis'>264</p>
+<p class='pln'>265</p>
+<p class='stm mis'>266</p>
+<p class='stm mis'>267</p>
+<p class='stm mis'>268</p>
+<p class='stm mis'>269</p>
+<p class='stm mis'>270</p>
+<p class='stm mis'>271</p>
+<p class='stm mis'>272</p>
+<p class='stm mis'>273</p>
+<p class='stm mis'>274</p>
+<p class='stm mis'>275</p>
+<p class='pln'>276</p>
+<p class='stm mis'>277</p>
+<p class='pln'>278</p>
+<p class='stm run hide_run'>279</p>
+<p class='pln'>280</p>
+<p class='pln'>281</p>
+<p class='pln'>282</p>
+<p class='pln'>283</p>
+<p class='pln'>284</p>
+<p class='pln'>285</p>
+<p class='pln'>286</p>
+<p class='pln'>287</p>
+<p class='pln'>288</p>
+<p class='pln'>289</p>
+<p class='pln'>290</p>
+<p class='pln'>291</p>
+<p class='pln'>292</p>
+<p class='pln'>293</p>
+<p class='pln'>294</p>
+<p class='pln'>295</p>
+<p class='pln'>296</p>
+<p class='pln'>297</p>
+<p class='pln'>298</p>
+<p class='pln'>299</p>
+<p class='pln'>300</p>
+<p class='pln'>301</p>
+<p class='pln'>302</p>
+<p class='pln'>303</p>
+<p class='pln'>304</p>
+<p class='pln'>305</p>
+<p class='pln'>306</p>
+<p class='stm mis'>307</p>
+<p class='stm mis'>308</p>
+<p class='stm mis'>309</p>
+<p class='stm mis'>310</p>
+<p class='stm mis'>311</p>
+<p class='stm mis'>312</p>
+<p class='pln'>313</p>
+<p class='pln'>314</p>
+<p class='stm mis'>315</p>
+<p class='stm mis'>316</p>
+<p class='pln'>317</p>
+<p class='pln'>318</p>
+<p class='stm mis'>319</p>
+<p class='pln'>320</p>
+<p class='stm mis'>321</p>
+<p class='stm mis'>322</p>
+<p class='pln'>323</p>
+<p class='pln'>324</p>
+<p class='pln'>325</p>
+<p class='stm mis'>326</p>
+<p class='pln'>327</p>
+<p class='stm run hide_run'>328</p>
+<p class='pln'>329</p>
+<p class='pln'>330</p>
+<p class='pln'>331</p>
+<p class='pln'>332</p>
+<p class='pln'>333</p>
+<p class='pln'>334</p>
+<p class='pln'>335</p>
+<p class='pln'>336</p>
+<p class='pln'>337</p>
+<p class='pln'>338</p>
+<p class='pln'>339</p>
+<p class='pln'>340</p>
+<p class='pln'>341</p>
+<p class='pln'>342</p>
+<p class='pln'>343</p>
+<p class='pln'>344</p>
+<p class='pln'>345</p>
+<p class='pln'>346</p>
+<p class='pln'>347</p>
+<p class='pln'>348</p>
+<p class='stm mis'>349</p>
+<p class='stm mis'>350</p>
+<p class='stm mis'>351</p>
+<p class='stm mis'>352</p>
+<p class='stm mis'>353</p>
+<p class='stm mis'>354</p>
+<p class='stm mis'>355</p>
+<p class='pln'>356</p>
+<p class='stm mis'>357</p>
+<p class='pln'>358</p>
+<p class='pln'>359</p>
+<p class='stm mis'>360</p>
+<p class='pln'>361</p>
+<p class='stm mis'>362</p>
+<p class='pln'>363</p>
+<p class='stm mis'>364</p>
+<p class='pln'>365</p>
+<p class='stm mis'>366</p>
+<p class='pln'>367</p>
+<p class='pln'>368</p>
+<p class='pln'>369</p>
+<p class='pln'>370</p>
+<p class='stm mis'>371</p>
+<p class='stm mis'>372</p>
+<p class='pln'>373</p>
+<p class='stm mis'>374</p>
+<p class='stm mis'>375</p>
+<p class='stm mis'>376</p>
+<p class='pln'>377</p>
+<p class='stm mis'>378</p>
+<p class='pln'>379</p>
+<p class='stm mis'>380</p>
+<p class='pln'>381</p>
+<p class='pln'>382</p>
+<p class='stm run hide_run'>383</p>
+<p class='pln'>384</p>
+<p class='pln'>385</p>
+<p class='pln'>386</p>
+<p class='pln'>387</p>
+<p class='pln'>388</p>
+<p class='pln'>389</p>
+<p class='pln'>390</p>
+<p class='pln'>391</p>
+<p class='pln'>392</p>
+<p class='pln'>393</p>
+<p class='pln'>394</p>
+<p class='pln'>395</p>
+<p class='pln'>396</p>
+<p class='pln'>397</p>
+<p class='pln'>398</p>
+<p class='pln'>399</p>
+<p class='pln'>400</p>
+<p class='pln'>401</p>
+<p class='pln'>402</p>
+<p class='pln'>403</p>
+<p class='pln'>404</p>
+<p class='pln'>405</p>
+<p class='pln'>406</p>
+<p class='pln'>407</p>
+<p class='pln'>408</p>
+<p class='pln'>409</p>
+<p class='pln'>410</p>
+<p class='pln'>411</p>
+<p class='pln'>412</p>
+<p class='pln'>413</p>
+<p class='pln'>414</p>
+<p class='pln'>415</p>
+<p class='pln'>416</p>
+<p class='pln'>417</p>
+<p class='pln'>418</p>
+<p class='pln'>419</p>
+<p class='pln'>420</p>
+<p class='pln'>421</p>
+<p class='pln'>422</p>
+<p class='pln'>423</p>
+<p class='pln'>424</p>
+<p class='pln'>425</p>
+<p class='pln'>426</p>
+<p class='pln'>427</p>
+<p class='stm mis'>428</p>
+<p class='pln'>429</p>
+<p class='pln'>430</p>
+<p class='stm mis'>431</p>
+<p class='stm mis'>432</p>
+<p class='stm mis'>433</p>
+<p class='pln'>434</p>
+<p class='pln'>435</p>
+<p class='stm mis'>436</p>
+<p class='stm mis'>437</p>
+<p class='stm mis'>438</p>
+<p class='stm mis'>439</p>
+<p class='stm mis'>440</p>
+<p class='pln'>441</p>
+<p class='pln'>442</p>
+<p class='pln'>443</p>
+<p class='pln'>444</p>
+<p class='pln'>445</p>
+<p class='stm mis'>446</p>
+<p class='stm mis'>447</p>
+<p class='stm mis'>448</p>
+<p class='stm mis'>449</p>
+<p class='stm mis'>450</p>
+<p class='pln'>451</p>
+<p class='stm mis'>452</p>
+<p class='pln'>453</p>
+<p class='pln'>454</p>
+<p class='stm mis'>455</p>
+<p class='stm mis'>456</p>
+<p class='stm mis'>457</p>
+<p class='stm mis'>458</p>
+<p class='stm mis'>459</p>
+<p class='stm mis'>460</p>
+<p class='stm mis'>461</p>
+<p class='stm mis'>462</p>
+<p class='stm mis'>463</p>
+<p class='stm mis'>464</p>
+<p class='stm mis'>465</p>
+<p class='pln'>466</p>
+<p class='stm mis'>467</p>
+<p class='pln'>468</p>
+<p class='stm mis'>469</p>
+<p class='stm mis'>470</p>
+<p class='pln'>471</p>
+<p class='stm mis'>472</p>
+<p class='pln'>473</p>
+<p class='pln'>474</p>
+<p class='pln'>475</p>
+<p class='stm mis'>476</p>
+<p class='stm mis'>477</p>
+<p class='pln'>478</p>
+<p class='stm mis'>479</p>
+<p class='pln'>480</p>
+<p class='pln'>481</p>
+<p class='stm mis'>482</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Define a simple format for saving numpy arrays to disk with the full</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>information about them.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>WARNING: Due to limitations in the interpretation of structured dtypes, dtypes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>with fields with empty names will have the names replaced by &#39;f0&#39;, &#39;f1&#39;, etc.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Such arrays will not round-trip through the format entirely accurately. The</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>data is intact; only the field names will differ. We are working on a fix for</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>this.&nbsp; This fix will not require a change in the file format. The arrays with</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>such structures can still be saved and restored, and the correct dtype may be</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>restored by using the `loadedarray.view(correct_dtype)` method.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Format Version 1.0</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>------------------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The first 6 bytes are a magic string: exactly &quot;\\\\x93NUMPY&quot;.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The next 1 byte is an unsigned byte: the major version number of the file</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>format, e.g. \\\\x01.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The next 1 byte is an unsigned byte: the minor version number of the file</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>format, e.g. \\\\x00. Note: the version of the file format is not tied to the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>version of the numpy package.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The next 2 bytes form a little-endian unsigned short int: the length of the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>header data HEADER_LEN.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The next HEADER_LEN bytes form the header data describing the array&#39;s format.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>It is an ASCII string which contains a Python literal expression of a</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>dictionary. It is terminated by a newline (&#39;\\\\n&#39;) and padded with spaces</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>(&#39;\\\\x20&#39;) to make the total length of the magic string + 4 + HEADER_LEN be</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>evenly divisible by 16 for alignment purposes.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The dictionary contains three keys:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;descr&quot; : dtype.descr</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; An object that can be passed as an argument to the numpy.dtype()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; constructor to create the array&#39;s dtype.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;fortran_order&quot; : bool</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Whether the array data is Fortran-contiguous or not. Since</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Fortran-contiguous arrays are a common form of non-C-contiguity, we</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; allow them to be written directly to disk for efficiency.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;shape&quot; : tuple of int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The shape of the array.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>For repeatability and readability, the dictionary keys are sorted in alphabetic</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>order. This is for convenience only. A writer SHOULD implement this if</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>possible. A reader MUST NOT depend on this.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Following the header comes the array data. If the dtype contains Python objects</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>(i.e. dtype.hasobject is True), then the data is a Python pickle of the array.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Otherwise the data is the contiguous (either C- or Fortran-, depending on</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>fortran_order) bytes of the array. Consumers can figure out the number of bytes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>by multiplying the number of elements given by the shape (noting that shape=()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>means there is 1 element) by dtype.itemsize.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>cPickle</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>numpy</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>lib</span><span class='op'>.</span><span class='nam'>utils</span> <span class='key'>import</span> <span class='nam'>safe_eval</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>MAGIC_PREFIX</span> <span class='op'>=</span> <span class='str'>&#39;\x93NUMPY&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>MAGIC_LEN</span> <span class='op'>=</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>MAGIC_PREFIX</span><span class='op'>)</span> <span class='op'>+</span> <span class='num'>2</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>magic</span><span class='op'>(</span><span class='nam'>major</span><span class='op'>,</span> <span class='nam'>minor</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot; Return the magic string for the given file format version.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; major : int in [0, 255]</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; minor : int in [0, 255]</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; magic : str</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Raises</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ValueError if the version cannot be formatted.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>major</span> <span class='op'>&lt;</span> <span class='num'>0</span> <span class='key'>or</span> <span class='nam'>major</span> <span class='op'>&gt;</span> <span class='num'>255</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='str'>&quot;major version must be 0 &lt;= major &lt; 256&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>minor</span> <span class='op'>&lt;</span> <span class='num'>0</span> <span class='key'>or</span> <span class='nam'>minor</span> <span class='op'>&gt;</span> <span class='num'>255</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='str'>&quot;minor version must be 0 &lt;= minor &lt; 256&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='str'>&#39;%s%s%s&#39;</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>MAGIC_PREFIX</span><span class='op'>,</span> <span class='nam'>chr</span><span class='op'>(</span><span class='nam'>major</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>chr</span><span class='op'>(</span><span class='nam'>minor</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>read_magic</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot; Read the magic string to get the version of the file format.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fp : filelike object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; major : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; minor : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>magic_str</span> <span class='op'>=</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>read</span><span class='op'>(</span><span class='nam'>MAGIC_LEN</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>magic_str</span><span class='op'>)</span> <span class='op'>!=</span> <span class='nam'>MAGIC_LEN</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;could not read %d characters for the magic string; got %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>MAGIC_LEN</span><span class='op'>,</span> <span class='nam'>magic_str</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>magic_str</span><span class='op'>[</span><span class='op'>:</span><span class='op'>-</span><span class='num'>2</span><span class='op'>]</span> <span class='op'>!=</span> <span class='nam'>MAGIC_PREFIX</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;the magic string is not correct; expected %r, got %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>MAGIC_PREFIX</span><span class='op'>,</span> <span class='nam'>magic_str</span><span class='op'>[</span><span class='op'>:</span><span class='op'>-</span><span class='num'>2</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>major</span><span class='op'>,</span> <span class='nam'>minor</span> <span class='op'>=</span> <span class='nam'>map</span><span class='op'>(</span><span class='nam'>ord</span><span class='op'>,</span> <span class='nam'>magic_str</span><span class='op'>[</span><span class='op'>-</span><span class='num'>2</span><span class='op'>:</span><span class='op'>]</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>major</span><span class='op'>,</span> <span class='nam'>minor</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>dtype_to_descr</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Get a serializable descriptor from the dtype.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; The .descr attribute of a dtype object cannot be round-tripped through</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; the dtype() constructor. Simple types, like dtype(&#39;float32&#39;), have</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; a descr which looks like a record array with one field with &#39;&#39; as</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; a name. The dtype() constructor interprets this as a request to give</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; a default name.&nbsp; Instead, we construct descriptor that can be passed to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; dtype().</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; dtype : dtype</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The dtype of the array that will be written to disk.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; descr : object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; An object that can be passed to `numpy.dtype()` in order to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; replicate the input dtype.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>names</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># This is a record array. The .descr is fine.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># XXX: parts of the record array with an empty name, like padding bytes,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># still get fiddled with. This needs to be fixed in the C implementation</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># of dtype().</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>descr</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>str</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>header_data_from_array_1_0</span><span class='op'>(</span><span class='nam'>array</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot; Get the dictionary of header metadata from a numpy.ndarray.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; array : numpy.ndarray</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; d : dict</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; This has the appropriate entries for writing its string representation</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; to the header of the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>d</span> <span class='op'>=</span> <span class='op'>{</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;shape&#39;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>shape</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>flags</span><span class='op'>.</span><span class='nam'>c_contiguous</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;fortran_order&#39;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>elif</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>flags</span><span class='op'>.</span><span class='nam'>f_contiguous</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;fortran_order&#39;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Totally non-contiguous data. We will have to make it C-contiguous</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># before writing. Note that we need to test for C_CONTIGUOUS first</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># because a 1-D array is both C_CONTIGUOUS and F_CONTIGUOUS.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;fortran_order&#39;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;descr&#39;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>dtype_to_descr</span><span class='op'>(</span><span class='nam'>array</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>d</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>write_array_header_1_0</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>d</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot; Write the header for an array using the 1.0 format.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fp : filelike object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; d : dict</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; This has the appropriate entries for writing its string representation</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; to the header of the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>struct</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&quot;{&quot;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>key</span><span class='op'>,</span> <span class='nam'>value</span> <span class='key'>in</span> <span class='nam'>sorted</span><span class='op'>(</span><span class='nam'>d</span><span class='op'>.</span><span class='nam'>items</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Need to use repr here, since we eval these when reading</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>header</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='str'>&quot;&#39;%s&#39;: %s, &quot;</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>key</span><span class='op'>,</span> <span class='nam'>repr</span><span class='op'>(</span><span class='nam'>value</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='str'>&quot;}&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header</span> <span class='op'>=</span> <span class='str'>&quot;&quot;</span><span class='op'>.</span><span class='nam'>join</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># Pad the header with spaces and a final newline such that the magic</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># string, the header-length short and the header are aligned on a 16-byte</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># boundary.&nbsp; Hopefully, some system, possibly memory-mapping, can take</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># advantage of our premature optimization.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>current_header_len</span> <span class='op'>=</span> <span class='nam'>MAGIC_LEN</span> <span class='op'>+</span> <span class='num'>2</span> <span class='op'>+</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span> <span class='op'>+</span> <span class='num'>1</span>&nbsp; <span class='com'># 1 for the newline</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>topad</span> <span class='op'>=</span> <span class='num'>16</span> <span class='op'>-</span> <span class='op'>(</span><span class='nam'>current_header_len</span> <span class='op'>%</span> <span class='num'>16</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header</span> <span class='op'>=</span> <span class='str'>&#39;%s%s\n&#39;</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>header</span><span class='op'>,</span> <span class='str'>&#39; &#39;</span><span class='op'>*</span><span class='nam'>topad</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span> <span class='op'>&gt;=</span> <span class='op'>(</span><span class='num'>256</span><span class='op'>*</span><span class='num'>256</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='str'>&quot;header does not fit inside %s bytes&quot;</span> <span class='op'>%</span> <span class='op'>(</span><span class='num'>256</span><span class='op'>*</span><span class='num'>256</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header_len_str</span> <span class='op'>=</span> <span class='nam'>struct</span><span class='op'>.</span><span class='nam'>pack</span><span class='op'>(</span><span class='str'>&#39;&lt;H&#39;</span><span class='op'>,</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>header_len_str</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>read_array_header_1_0</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Read an array header from a filelike object using the 1.0 file format</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; version.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; This will leave the file object located just after the header.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fp : filelike object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; A file object or something with a `.read()` method like a file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; shape : tuple of int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The shape of the array.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fortran_order : bool</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The array data will be written out directly if it is either C-contiguous</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; or Fortran-contiguous. Otherwise, it will be made contiguous before</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; writing it out.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; dtype : dtype</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The dtype of the file&#39;s data.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Raises</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ValueError :</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the data is invalid.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># Read an unsigned, little-endian short int which has the length of the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># header.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>struct</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>hlength_str</span> <span class='op'>=</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>read</span><span class='op'>(</span><span class='num'>2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>hlength_str</span><span class='op'>)</span> <span class='op'>!=</span> <span class='num'>2</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;EOF at %s before reading array header length&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>tell</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header_length</span> <span class='op'>=</span> <span class='nam'>struct</span><span class='op'>.</span><span class='nam'>unpack</span><span class='op'>(</span><span class='str'>&#39;&lt;H&#39;</span><span class='op'>,</span> <span class='nam'>hlength_str</span><span class='op'>)</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>header</span> <span class='op'>=</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>read</span><span class='op'>(</span><span class='nam'>header_length</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span> <span class='op'>!=</span> <span class='nam'>header_length</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='str'>&quot;EOF at %s before reading array header&quot;</span> <span class='op'>%</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>tell</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># The header is a pretty-printed string representation of a literal Python</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># dictionary with trailing newlines padded to a 16-byte boundary. The keys</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># are strings.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'>#&nbsp;&nbsp; &quot;shape&quot; : tuple of int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'>#&nbsp;&nbsp; &quot;fortran_order&quot; : bool</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'>#&nbsp;&nbsp; &quot;descr&quot; : dtype.descr</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>d</span> <span class='op'>=</span> <span class='nam'>safe_eval</span><span class='op'>(</span><span class='nam'>header</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>SyntaxError</span><span class='op'>,</span> <span class='nam'>e</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;Cannot parse header: %r\nException: %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>header</span><span class='op'>,</span> <span class='nam'>e</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>d</span><span class='op'>,</span> <span class='nam'>dict</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;Header is not a dictionary: %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='nam'>d</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>keys</span> <span class='op'>=</span> <span class='nam'>d</span><span class='op'>.</span><span class='nam'>keys</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>keys</span><span class='op'>.</span><span class='nam'>sort</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>keys</span> <span class='op'>!=</span> <span class='op'>[</span><span class='str'>&#39;descr&#39;</span><span class='op'>,</span> <span class='str'>&#39;fortran_order&#39;</span><span class='op'>,</span> <span class='str'>&#39;shape&#39;</span><span class='op'>]</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;Header does not contain the correct keys: %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>keys</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># Sanity-check the values.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='op'>(</span><span class='key'>not</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;shape&#39;</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>tuple</span><span class='op'>)</span> <span class='key'>or</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>not</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>all</span><span class='op'>(</span><span class='op'>[</span><span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>x</span><span class='op'>,</span> <span class='op'>(</span><span class='nam'>int</span><span class='op'>,</span><span class='nam'>long</span><span class='op'>)</span><span class='op'>)</span> <span class='key'>for</span> <span class='nam'>x</span> <span class='key'>in</span> <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;shape&#39;</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;shape is not valid: %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;shape&#39;</span><span class='op'>]</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;fortran_order&#39;</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>bool</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;fortran_order is not a valid bool: %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;fortran_order&#39;</span><span class='op'>]</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>(</span><span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;descr&#39;</span><span class='op'>]</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>TypeError</span><span class='op'>,</span> <span class='nam'>e</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;descr is not a valid dtype descriptor: %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;descr&#39;</span><span class='op'>]</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;shape&#39;</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>d</span><span class='op'>[</span><span class='str'>&#39;fortran_order&#39;</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>write_array</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>array</span><span class='op'>,</span> <span class='nam'>version</span><span class='op'>=</span><span class='op'>(</span><span class='num'>1</span><span class='op'>,</span><span class='num'>0</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Write an array to an NPY file, including a header.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; If the array is neither C-contiguous or Fortran-contiguous AND if the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; filelike object is not a real file object, then this function will have</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; to copy data in memory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fp : filelike object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; An open, writable file object or similar object with a `.write()`</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; method.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; array : numpy.ndarray</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The array to write to disk.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; version : (int, int), optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The version number of the format.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Raises</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ValueError</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the array cannot be persisted.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Various other errors</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the array contains Python objects as part of its dtype, the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; process of pickling them may raise arbitrary errors if the objects</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; are not picklable.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>version</span> <span class='op'>!=</span> <span class='op'>(</span><span class='num'>1</span><span class='op'>,</span> <span class='num'>0</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;we only support format version (1,0), not %s&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>version</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>magic</span><span class='op'>(</span><span class='op'>*</span><span class='nam'>version</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>write_array_header_1_0</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>header_data_from_array_1_0</span><span class='op'>(</span><span class='nam'>array</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>hasobject</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We contain Python objects so we cannot write out the data directly.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Instead, we will pickle it out with version 2 of the pickle protocol.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>cPickle</span><span class='op'>.</span><span class='nam'>dump</span><span class='op'>(</span><span class='nam'>array</span><span class='op'>,</span> <span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>protocol</span><span class='op'>=</span><span class='num'>2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>elif</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>flags</span><span class='op'>.</span><span class='nam'>f_contiguous</span> <span class='key'>and</span> <span class='key'>not</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>flags</span><span class='op'>.</span><span class='nam'>c_contiguous</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Use a suboptimal, possibly memory-intensive, but correct way to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># handle Fortran-contiguous arrays.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>array</span><span class='op'>.</span><span class='nam'>data</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>file</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span><span class='op'>.</span><span class='nam'>tofile</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># XXX: We could probably chunk this using something like</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># arrayterator.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>array</span><span class='op'>.</span><span class='nam'>tostring</span><span class='op'>(</span><span class='str'>&#39;C&#39;</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>read_array</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Read an array from an NPY file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fp : filelike object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If this is not a real file object, then this may take extra memory and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; time.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; array : numpy.ndarray</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The array from the data on disk.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Raises</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ValueError</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the data is invalid.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>version</span> <span class='op'>=</span> <span class='nam'>read_magic</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>version</span> <span class='op'>!=</span> <span class='op'>(</span><span class='num'>1</span><span class='op'>,</span> <span class='num'>0</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;only support version (1,0) of file format, not %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>version</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>shape</span><span class='op'>,</span> <span class='nam'>fortran_order</span><span class='op'>,</span> <span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>read_array_header_1_0</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>shape</span><span class='op'>)</span> <span class='op'>==</span> <span class='num'>0</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>count</span> <span class='op'>=</span> <span class='num'>1</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>count</span> <span class='op'>=</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>multiply</span><span class='op'>.</span><span class='nam'>reduce</span><span class='op'>(</span><span class='nam'>shape</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># Now read the actual data.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>hasobject</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># The array contained Python objects. We need to unpickle the data.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span> <span class='op'>=</span> <span class='nam'>cPickle</span><span class='op'>.</span><span class='nam'>load</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>file</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We can use the fast fromfile() function.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span> <span class='op'>=</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>fromfile</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>=</span><span class='nam'>dtype</span><span class='op'>,</span> <span class='nam'>count</span><span class='op'>=</span><span class='nam'>count</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># This is not a real file. We have to read it the memory-intensive</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># way.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># XXX: we can probably chunk this to avoid the memory hit.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>data</span> <span class='op'>=</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>read</span><span class='op'>(</span><span class='nam'>count</span> <span class='op'>*</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>itemsize</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span> <span class='op'>=</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>fromstring</span><span class='op'>(</span><span class='nam'>data</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>=</span><span class='nam'>dtype</span><span class='op'>,</span> <span class='nam'>count</span><span class='op'>=</span><span class='nam'>count</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>fortran_order</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span><span class='op'>.</span><span class='nam'>shape</span> <span class='op'>=</span> <span class='nam'>shape</span><span class='op'>[</span><span class='op'>:</span><span class='op'>:</span><span class='op'>-</span><span class='num'>1</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span> <span class='op'>=</span> <span class='nam'>array</span><span class='op'>.</span><span class='nam'>transpose</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>array</span><span class='op'>.</span><span class='nam'>shape</span> <span class='op'>=</span> <span class='nam'>shape</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>open_memmap</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>=</span><span class='str'>&#39;r+&#39;</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>=</span><span class='nam'>None</span><span class='op'>,</span> <span class='nam'>shape</span><span class='op'>=</span><span class='nam'>None</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='nam'>fortran_order</span><span class='op'>=</span><span class='nam'>False</span><span class='op'>,</span> <span class='nam'>version</span><span class='op'>=</span><span class='op'>(</span><span class='num'>1</span><span class='op'>,</span><span class='num'>0</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Open a .npy file as a memory-mapped array.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; This may be used to read an existing file or create a new one.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; filename : str</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The name of the file on disk. This may not be a filelike object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; mode : str, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The mode to open the file with. In addition to the standard file modes,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &#39;c&#39; is also accepted to mean &quot;copy on write&quot;. See `numpy.memmap` for</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; the available mode strings.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; dtype : dtype, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The data type of the array if we are creating a new file in &quot;write&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; mode.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; shape : tuple of int, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The shape of the array if we are creating a new file in &quot;write&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; mode.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; fortran_order : bool, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Whether the array should be Fortran-contiguous (True) or</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; C-contiguous (False) if we are creating a new file in &quot;write&quot; mode.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; version : tuple of int (major, minor)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the mode is a &quot;write&quot; mode, then this is the version of the file</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; format used to create the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; marray : numpy.memmap</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The memory-mapped array.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Raises</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ValueError</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the data or the mode is invalid.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; IOError</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If the file is not found or cannot be opened correctly.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; numpy.memmap</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='str'>&#39;w&#39;</span> <span class='key'>in</span> <span class='nam'>mode</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We are creating the file, not reading it.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Check if we ought to create the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>version</span> <span class='op'>!=</span> <span class='op'>(</span><span class='num'>1</span><span class='op'>,</span> <span class='num'>0</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;only support version (1,0) of file format, not %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>version</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Ensure that the given dtype is an authentic dtype object rather than</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># just something that can be interpreted as a dtype object.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>hasobject</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;Array can&#39;t be memory-mapped: Python objects in dtype.&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>d</span> <span class='op'>=</span> <span class='nam'>dict</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>descr</span><span class='op'>=</span><span class='nam'>dtype_to_descr</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fortran_order</span><span class='op'>=</span><span class='nam'>fortran_order</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>shape</span><span class='op'>=</span><span class='nam'>shape</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># If we got here, then it should be safe to create the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span> <span class='op'>=</span> <span class='nam'>open</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>+</span><span class='str'>&#39;b&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>magic</span><span class='op'>(</span><span class='op'>*</span><span class='nam'>version</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>write_array_header_1_0</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>,</span> <span class='nam'>d</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>offset</span> <span class='op'>=</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>tell</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>finally</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>close</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Read the header of the file first.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span> <span class='op'>=</span> <span class='nam'>open</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>,</span> <span class='str'>&#39;rb&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>version</span> <span class='op'>=</span> <span class='nam'>read_magic</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>version</span> <span class='op'>!=</span> <span class='op'>(</span><span class='num'>1</span><span class='op'>,</span> <span class='num'>0</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;only support version (1,0) of file format, not %r&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>version</span><span class='op'>,</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>shape</span><span class='op'>,</span> <span class='nam'>fortran_order</span><span class='op'>,</span> <span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>read_array_header_1_0</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>hasobject</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&quot;Array can&#39;t be memory-mapped: Python objects in dtype.&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='nam'>msg</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>offset</span> <span class='op'>=</span> <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>tell</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>finally</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span><span class='op'>.</span><span class='nam'>close</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>fortran_order</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>order</span> <span class='op'>=</span> <span class='str'>&#39;F&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>order</span> <span class='op'>=</span> <span class='str'>&#39;C&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># We need to change a write-only mode to a read-write mode since we&#39;ve</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># already written data to the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>mode</span> <span class='op'>==</span> <span class='str'>&#39;w+&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>mode</span> <span class='op'>=</span> <span class='str'>&#39;r+&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>marray</span> <span class='op'>=</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>memmap</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>=</span><span class='nam'>dtype</span><span class='op'>,</span> <span class='nam'>shape</span><span class='op'>=</span><span class='nam'>shape</span><span class='op'>,</span> <span class='nam'>order</span><span class='op'>=</span><span class='nam'>order</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>mode</span><span class='op'>=</span><span class='nam'>mode</span><span class='op'>,</span> <span class='nam'>offset</span><span class='op'>=</span><span class='nam'>offset</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>marray</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

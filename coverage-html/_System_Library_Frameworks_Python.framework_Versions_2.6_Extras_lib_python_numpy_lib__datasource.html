@@ -1,0 +1,1235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/lib/_datasource</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/lib/_datasource</b> :
+            <span class='pc_cov'>22%</span>
+        </h1>
+        <h2 class='stats'>
+            162 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>35 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>127 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='pln'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='pln'>4</p>
+<p class='pln'>5</p>
+<p class='pln'>6</p>
+<p class='pln'>7</p>
+<p class='pln'>8</p>
+<p class='pln'>9</p>
+<p class='pln'>10</p>
+<p class='pln'>11</p>
+<p class='pln'>12</p>
+<p class='pln'>13</p>
+<p class='pln'>14</p>
+<p class='pln'>15</p>
+<p class='pln'>16</p>
+<p class='pln'>17</p>
+<p class='pln'>18</p>
+<p class='pln'>19</p>
+<p class='pln'>20</p>
+<p class='pln'>21</p>
+<p class='pln'>22</p>
+<p class='pln'>23</p>
+<p class='pln'>24</p>
+<p class='pln'>25</p>
+<p class='pln'>26</p>
+<p class='pln'>27</p>
+<p class='pln'>28</p>
+<p class='pln'>29</p>
+<p class='pln'>30</p>
+<p class='pln'>31</p>
+<p class='pln'>32</p>
+<p class='pln'>33</p>
+<p class='pln'>34</p>
+<p class='stm run hide_run'>35</p>
+<p class='pln'>36</p>
+<p class='stm run hide_run'>37</p>
+<p class='stm run hide_run'>38</p>
+<p class='pln'>39</p>
+<p class='pln'>40</p>
+<p class='pln'>41</p>
+<p class='pln'>42</p>
+<p class='pln'>43</p>
+<p class='pln'>44</p>
+<p class='stm run hide_run'>45</p>
+<p class='stm run hide_run'>46</p>
+<p class='stm run hide_run'>47</p>
+<p class='stm run hide_run'>48</p>
+<p class='stm run hide_run'>49</p>
+<p class='stm mis'>50</p>
+<p class='stm mis'>51</p>
+<p class='stm mis'>52</p>
+<p class='stm mis'>53</p>
+<p class='stm mis'>54</p>
+<p class='stm mis'>55</p>
+<p class='stm mis'>56</p>
+<p class='stm mis'>57</p>
+<p class='stm mis'>58</p>
+<p class='stm mis'>59</p>
+<p class='stm mis'>60</p>
+<p class='stm mis'>61</p>
+<p class='stm mis'>62</p>
+<p class='pln'>63</p>
+<p class='stm run hide_run'>64</p>
+<p class='stm mis'>65</p>
+<p class='stm mis'>66</p>
+<p class='stm run hide_run'>67</p>
+<p class='stm mis'>68</p>
+<p class='stm mis'>69</p>
+<p class='pln'>70</p>
+<p class='stm run hide_run'>71</p>
+<p class='pln'>72</p>
+<p class='stm run hide_run'>73</p>
+<p class='pln'>74</p>
+<p class='pln'>75</p>
+<p class='pln'>76</p>
+<p class='pln'>77</p>
+<p class='pln'>78</p>
+<p class='pln'>79</p>
+<p class='pln'>80</p>
+<p class='pln'>81</p>
+<p class='pln'>82</p>
+<p class='pln'>83</p>
+<p class='pln'>84</p>
+<p class='pln'>85</p>
+<p class='pln'>86</p>
+<p class='pln'>87</p>
+<p class='pln'>88</p>
+<p class='pln'>89</p>
+<p class='pln'>90</p>
+<p class='pln'>91</p>
+<p class='pln'>92</p>
+<p class='pln'>93</p>
+<p class='stm mis'>94</p>
+<p class='stm mis'>95</p>
+<p class='pln'>96</p>
+<p class='pln'>97</p>
+<p class='stm run hide_run'>98</p>
+<p class='pln'>99</p>
+<p class='pln'>100</p>
+<p class='pln'>101</p>
+<p class='pln'>102</p>
+<p class='pln'>103</p>
+<p class='pln'>104</p>
+<p class='pln'>105</p>
+<p class='pln'>106</p>
+<p class='pln'>107</p>
+<p class='pln'>108</p>
+<p class='pln'>109</p>
+<p class='pln'>110</p>
+<p class='pln'>111</p>
+<p class='pln'>112</p>
+<p class='pln'>113</p>
+<p class='pln'>114</p>
+<p class='pln'>115</p>
+<p class='pln'>116</p>
+<p class='pln'>117</p>
+<p class='pln'>118</p>
+<p class='pln'>119</p>
+<p class='pln'>120</p>
+<p class='pln'>121</p>
+<p class='pln'>122</p>
+<p class='pln'>123</p>
+<p class='pln'>124</p>
+<p class='pln'>125</p>
+<p class='pln'>126</p>
+<p class='pln'>127</p>
+<p class='pln'>128</p>
+<p class='pln'>129</p>
+<p class='pln'>130</p>
+<p class='pln'>131</p>
+<p class='pln'>132</p>
+<p class='pln'>133</p>
+<p class='pln'>134</p>
+<p class='pln'>135</p>
+<p class='pln'>136</p>
+<p class='pln'>137</p>
+<p class='pln'>138</p>
+<p class='pln'>139</p>
+<p class='pln'>140</p>
+<p class='pln'>141</p>
+<p class='pln'>142</p>
+<p class='pln'>143</p>
+<p class='pln'>144</p>
+<p class='stm run hide_run'>145</p>
+<p class='pln'>146</p>
+<p class='stm mis'>147</p>
+<p class='stm mis'>148</p>
+<p class='stm mis'>149</p>
+<p class='pln'>150</p>
+<p class='stm mis'>151</p>
+<p class='stm mis'>152</p>
+<p class='stm mis'>153</p>
+<p class='pln'>154</p>
+<p class='stm run hide_run'>155</p>
+<p class='pln'>156</p>
+<p class='stm mis'>157</p>
+<p class='stm mis'>158</p>
+<p class='pln'>159</p>
+<p class='stm run hide_run'>160</p>
+<p class='pln'>161</p>
+<p class='pln'>162</p>
+<p class='stm mis'>163</p>
+<p class='stm mis'>164</p>
+<p class='pln'>165</p>
+<p class='stm run hide_run'>166</p>
+<p class='pln'>167</p>
+<p class='pln'>168</p>
+<p class='pln'>169</p>
+<p class='stm mis'>170</p>
+<p class='stm mis'>171</p>
+<p class='stm mis'>172</p>
+<p class='stm mis'>173</p>
+<p class='stm mis'>174</p>
+<p class='pln'>175</p>
+<p class='stm run hide_run'>176</p>
+<p class='pln'>177</p>
+<p class='pln'>178</p>
+<p class='pln'>179</p>
+<p class='pln'>180</p>
+<p class='pln'>181</p>
+<p class='pln'>182</p>
+<p class='pln'>183</p>
+<p class='stm mis'>184</p>
+<p class='stm mis'>185</p>
+<p class='pln'>186</p>
+<p class='stm mis'>187</p>
+<p class='pln'>188</p>
+<p class='stm run hide_run'>189</p>
+<p class='pln'>190</p>
+<p class='stm mis'>191</p>
+<p class='stm mis'>192</p>
+<p class='stm mis'>193</p>
+<p class='stm mis'>194</p>
+<p class='stm mis'>195</p>
+<p class='stm mis'>196</p>
+<p class='pln'>197</p>
+<p class='stm run hide_run'>198</p>
+<p class='pln'>199</p>
+<p class='pln'>200</p>
+<p class='pln'>201</p>
+<p class='stm mis'>202</p>
+<p class='pln'>203</p>
+<p class='pln'>204</p>
+<p class='pln'>205</p>
+<p class='pln'>206</p>
+<p class='pln'>207</p>
+<p class='pln'>208</p>
+<p class='pln'>209</p>
+<p class='stm mis'>210</p>
+<p class='stm mis'>211</p>
+<p class='pln'>212</p>
+<p class='stm run hide_run'>213</p>
+<p class='pln'>214</p>
+<p class='pln'>215</p>
+<p class='pln'>216</p>
+<p class='pln'>217</p>
+<p class='pln'>218</p>
+<p class='pln'>219</p>
+<p class='pln'>220</p>
+<p class='stm mis'>221</p>
+<p class='pln'>222</p>
+<p class='stm mis'>223</p>
+<p class='pln'>224</p>
+<p class='pln'>225</p>
+<p class='stm mis'>226</p>
+<p class='stm mis'>227</p>
+<p class='pln'>228</p>
+<p class='pln'>229</p>
+<p class='stm mis'>230</p>
+<p class='stm mis'>231</p>
+<p class='stm mis'>232</p>
+<p class='stm mis'>233</p>
+<p class='stm mis'>234</p>
+<p class='stm mis'>235</p>
+<p class='pln'>236</p>
+<p class='stm mis'>237</p>
+<p class='pln'>238</p>
+<p class='stm mis'>239</p>
+<p class='stm mis'>240</p>
+<p class='stm mis'>241</p>
+<p class='stm mis'>242</p>
+<p class='stm mis'>243</p>
+<p class='pln'>244</p>
+<p class='stm run hide_run'>245</p>
+<p class='pln'>246</p>
+<p class='pln'>247</p>
+<p class='pln'>248</p>
+<p class='pln'>249</p>
+<p class='pln'>250</p>
+<p class='pln'>251</p>
+<p class='pln'>252</p>
+<p class='pln'>253</p>
+<p class='pln'>254</p>
+<p class='pln'>255</p>
+<p class='pln'>256</p>
+<p class='pln'>257</p>
+<p class='pln'>258</p>
+<p class='stm mis'>259</p>
+<p class='pln'>260</p>
+<p class='stm mis'>261</p>
+<p class='pln'>262</p>
+<p class='stm mis'>263</p>
+<p class='pln'>264</p>
+<p class='pln'>265</p>
+<p class='stm mis'>266</p>
+<p class='pln'>267</p>
+<p class='stm mis'>268</p>
+<p class='pln'>269</p>
+<p class='stm mis'>270</p>
+<p class='stm mis'>271</p>
+<p class='stm mis'>272</p>
+<p class='stm mis'>273</p>
+<p class='stm mis'>274</p>
+<p class='stm mis'>275</p>
+<p class='pln'>276</p>
+<p class='stm run hide_run'>277</p>
+<p class='pln'>278</p>
+<p class='pln'>279</p>
+<p class='pln'>280</p>
+<p class='pln'>281</p>
+<p class='pln'>282</p>
+<p class='pln'>283</p>
+<p class='pln'>284</p>
+<p class='pln'>285</p>
+<p class='pln'>286</p>
+<p class='pln'>287</p>
+<p class='pln'>288</p>
+<p class='pln'>289</p>
+<p class='pln'>290</p>
+<p class='pln'>291</p>
+<p class='pln'>292</p>
+<p class='pln'>293</p>
+<p class='pln'>294</p>
+<p class='pln'>295</p>
+<p class='pln'>296</p>
+<p class='pln'>297</p>
+<p class='pln'>298</p>
+<p class='pln'>299</p>
+<p class='pln'>300</p>
+<p class='pln'>301</p>
+<p class='pln'>302</p>
+<p class='stm mis'>303</p>
+<p class='pln'>304</p>
+<p class='pln'>305</p>
+<p class='pln'>306</p>
+<p class='pln'>307</p>
+<p class='pln'>308</p>
+<p class='pln'>309</p>
+<p class='pln'>310</p>
+<p class='pln'>311</p>
+<p class='pln'>312</p>
+<p class='pln'>313</p>
+<p class='stm mis'>314</p>
+<p class='stm mis'>315</p>
+<p class='stm mis'>316</p>
+<p class='stm mis'>317</p>
+<p class='stm mis'>318</p>
+<p class='stm mis'>319</p>
+<p class='stm mis'>320</p>
+<p class='pln'>321</p>
+<p class='stm run hide_run'>322</p>
+<p class='pln'>323</p>
+<p class='pln'>324</p>
+<p class='pln'>325</p>
+<p class='stm mis'>326</p>
+<p class='stm mis'>327</p>
+<p class='stm mis'>328</p>
+<p class='stm mis'>329</p>
+<p class='pln'>330</p>
+<p class='stm mis'>331</p>
+<p class='stm mis'>332</p>
+<p class='stm mis'>333</p>
+<p class='stm mis'>334</p>
+<p class='pln'>335</p>
+<p class='stm run hide_run'>336</p>
+<p class='pln'>337</p>
+<p class='pln'>338</p>
+<p class='pln'>339</p>
+<p class='pln'>340</p>
+<p class='pln'>341</p>
+<p class='pln'>342</p>
+<p class='pln'>343</p>
+<p class='pln'>344</p>
+<p class='pln'>345</p>
+<p class='pln'>346</p>
+<p class='pln'>347</p>
+<p class='pln'>348</p>
+<p class='pln'>349</p>
+<p class='pln'>350</p>
+<p class='pln'>351</p>
+<p class='pln'>352</p>
+<p class='pln'>353</p>
+<p class='pln'>354</p>
+<p class='pln'>355</p>
+<p class='pln'>356</p>
+<p class='pln'>357</p>
+<p class='pln'>358</p>
+<p class='pln'>359</p>
+<p class='pln'>360</p>
+<p class='pln'>361</p>
+<p class='pln'>362</p>
+<p class='pln'>363</p>
+<p class='pln'>364</p>
+<p class='pln'>365</p>
+<p class='pln'>366</p>
+<p class='pln'>367</p>
+<p class='pln'>368</p>
+<p class='pln'>369</p>
+<p class='pln'>370</p>
+<p class='pln'>371</p>
+<p class='stm mis'>372</p>
+<p class='pln'>373</p>
+<p class='pln'>374</p>
+<p class='stm mis'>375</p>
+<p class='stm mis'>376</p>
+<p class='pln'>377</p>
+<p class='pln'>378</p>
+<p class='stm mis'>379</p>
+<p class='stm mis'>380</p>
+<p class='stm mis'>381</p>
+<p class='pln'>382</p>
+<p class='pln'>383</p>
+<p class='stm mis'>384</p>
+<p class='stm mis'>385</p>
+<p class='stm mis'>386</p>
+<p class='stm mis'>387</p>
+<p class='stm mis'>388</p>
+<p class='stm mis'>389</p>
+<p class='stm mis'>390</p>
+<p class='stm mis'>391</p>
+<p class='pln'>392</p>
+<p class='stm run hide_run'>393</p>
+<p class='pln'>394</p>
+<p class='pln'>395</p>
+<p class='pln'>396</p>
+<p class='pln'>397</p>
+<p class='pln'>398</p>
+<p class='pln'>399</p>
+<p class='pln'>400</p>
+<p class='pln'>401</p>
+<p class='pln'>402</p>
+<p class='pln'>403</p>
+<p class='pln'>404</p>
+<p class='pln'>405</p>
+<p class='pln'>406</p>
+<p class='pln'>407</p>
+<p class='pln'>408</p>
+<p class='pln'>409</p>
+<p class='pln'>410</p>
+<p class='pln'>411</p>
+<p class='pln'>412</p>
+<p class='pln'>413</p>
+<p class='pln'>414</p>
+<p class='pln'>415</p>
+<p class='pln'>416</p>
+<p class='pln'>417</p>
+<p class='pln'>418</p>
+<p class='pln'>419</p>
+<p class='pln'>420</p>
+<p class='pln'>421</p>
+<p class='stm mis'>422</p>
+<p class='stm mis'>423</p>
+<p class='pln'>424</p>
+<p class='pln'>425</p>
+<p class='stm mis'>426</p>
+<p class='stm mis'>427</p>
+<p class='stm mis'>428</p>
+<p class='stm mis'>429</p>
+<p class='stm mis'>430</p>
+<p class='stm mis'>431</p>
+<p class='pln'>432</p>
+<p class='stm mis'>433</p>
+<p class='pln'>434</p>
+<p class='pln'>435</p>
+<p class='stm run hide_run'>436</p>
+<p class='pln'>437</p>
+<p class='pln'>438</p>
+<p class='pln'>439</p>
+<p class='pln'>440</p>
+<p class='pln'>441</p>
+<p class='pln'>442</p>
+<p class='pln'>443</p>
+<p class='pln'>444</p>
+<p class='pln'>445</p>
+<p class='pln'>446</p>
+<p class='pln'>447</p>
+<p class='pln'>448</p>
+<p class='pln'>449</p>
+<p class='pln'>450</p>
+<p class='pln'>451</p>
+<p class='pln'>452</p>
+<p class='pln'>453</p>
+<p class='pln'>454</p>
+<p class='pln'>455</p>
+<p class='pln'>456</p>
+<p class='pln'>457</p>
+<p class='pln'>458</p>
+<p class='pln'>459</p>
+<p class='pln'>460</p>
+<p class='pln'>461</p>
+<p class='pln'>462</p>
+<p class='pln'>463</p>
+<p class='pln'>464</p>
+<p class='stm run hide_run'>465</p>
+<p class='pln'>466</p>
+<p class='stm mis'>467</p>
+<p class='stm mis'>468</p>
+<p class='pln'>469</p>
+<p class='stm run hide_run'>470</p>
+<p class='stm mis'>471</p>
+<p class='pln'>472</p>
+<p class='stm run hide_run'>473</p>
+<p class='pln'>474</p>
+<p class='stm mis'>475</p>
+<p class='stm mis'>476</p>
+<p class='stm mis'>477</p>
+<p class='pln'>478</p>
+<p class='stm mis'>479</p>
+<p class='stm mis'>480</p>
+<p class='pln'>481</p>
+<p class='stm run hide_run'>482</p>
+<p class='pln'>483</p>
+<p class='stm mis'>484</p>
+<p class='pln'>485</p>
+<p class='stm run hide_run'>486</p>
+<p class='pln'>487</p>
+<p class='pln'>488</p>
+<p class='pln'>489</p>
+<p class='pln'>490</p>
+<p class='pln'>491</p>
+<p class='pln'>492</p>
+<p class='pln'>493</p>
+<p class='pln'>494</p>
+<p class='pln'>495</p>
+<p class='pln'>496</p>
+<p class='pln'>497</p>
+<p class='pln'>498</p>
+<p class='pln'>499</p>
+<p class='pln'>500</p>
+<p class='pln'>501</p>
+<p class='pln'>502</p>
+<p class='pln'>503</p>
+<p class='pln'>504</p>
+<p class='pln'>505</p>
+<p class='pln'>506</p>
+<p class='pln'>507</p>
+<p class='pln'>508</p>
+<p class='pln'>509</p>
+<p class='pln'>510</p>
+<p class='stm mis'>511</p>
+<p class='pln'>512</p>
+<p class='stm run hide_run'>513</p>
+<p class='pln'>514</p>
+<p class='pln'>515</p>
+<p class='pln'>516</p>
+<p class='pln'>517</p>
+<p class='pln'>518</p>
+<p class='pln'>519</p>
+<p class='pln'>520</p>
+<p class='pln'>521</p>
+<p class='pln'>522</p>
+<p class='pln'>523</p>
+<p class='pln'>524</p>
+<p class='pln'>525</p>
+<p class='pln'>526</p>
+<p class='pln'>527</p>
+<p class='pln'>528</p>
+<p class='pln'>529</p>
+<p class='pln'>530</p>
+<p class='pln'>531</p>
+<p class='pln'>532</p>
+<p class='pln'>533</p>
+<p class='pln'>534</p>
+<p class='pln'>535</p>
+<p class='pln'>536</p>
+<p class='pln'>537</p>
+<p class='pln'>538</p>
+<p class='pln'>539</p>
+<p class='pln'>540</p>
+<p class='pln'>541</p>
+<p class='pln'>542</p>
+<p class='pln'>543</p>
+<p class='pln'>544</p>
+<p class='pln'>545</p>
+<p class='pln'>546</p>
+<p class='stm mis'>547</p>
+<p class='pln'>548</p>
+<p class='stm run hide_run'>549</p>
+<p class='pln'>550</p>
+<p class='pln'>551</p>
+<p class='pln'>552</p>
+<p class='pln'>553</p>
+<p class='pln'>554</p>
+<p class='pln'>555</p>
+<p class='pln'>556</p>
+<p class='pln'>557</p>
+<p class='pln'>558</p>
+<p class='pln'>559</p>
+<p class='pln'>560</p>
+<p class='pln'>561</p>
+<p class='pln'>562</p>
+<p class='pln'>563</p>
+<p class='pln'>564</p>
+<p class='pln'>565</p>
+<p class='pln'>566</p>
+<p class='pln'>567</p>
+<p class='pln'>568</p>
+<p class='pln'>569</p>
+<p class='pln'>570</p>
+<p class='stm mis'>571</p>
+<p class='pln'>572</p>
+<p class='stm run hide_run'>573</p>
+<p class='pln'>574</p>
+<p class='pln'>575</p>
+<p class='pln'>576</p>
+<p class='pln'>577</p>
+<p class='pln'>578</p>
+<p class='pln'>579</p>
+<p class='pln'>580</p>
+<p class='pln'>581</p>
+<p class='pln'>582</p>
+<p class='pln'>583</p>
+<p class='pln'>584</p>
+<p class='pln'>585</p>
+<p class='pln'>586</p>
+<p class='stm mis'>587</p>
+<p class='stm mis'>588</p>
+<p class='pln'>589</p>
+<p class='pln'>590</p>
+<p class='stm mis'>591</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='pln'><span class='str'>&quot;&quot;&quot;A file interface for handling local and remote data files.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>The goal of datasource is to abstract some of the file system operations when</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>dealing with data files so the researcher doesn&#39;t have to know all the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>low-level details.&nbsp; Through datasource, a researcher can obtain and use a</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>file with one function call, regardless of location of the file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>DataSource is meant to augment standard python libraries, not replace them.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>It should work seemlessly with standard file IO operations and the os module.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>DataSource files can originate locally or remotely:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>- local files : &#39;/home/guido/src/local/data.txt&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>- URLs (http, ftp, ...) : &#39;http://www.scipy.org/not/real/data.txt&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>DataSource files can also be compressed or uncompressed.&nbsp; Currently only gzip</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>and bz2 are supported.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Example:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; # Create a DataSource, use os.curdir (default) for local storage.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ds = datasource.DataSource()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; # Open a remote file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; # DataSource downloads the file, stores it locally in:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; #&nbsp; &nbsp;&nbsp; &#39;./www.google.com/index.html&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; # opens the file and returns a file object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; fp = ds.open(&#39;http://www.google.com/index.html&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; # Use the file as you normally would</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; fp.read()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; fp.close()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>__docformat__</span> <span class='op'>=</span> <span class='str'>&quot;restructuredtext en&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>os</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>shutil</span> <span class='key'>import</span> <span class='nam'>rmtree</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># Using a class instead of a module-level dictionary</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># to reduce the inital &#39;import numpy&#39; overhead by</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># deferring the import of bz2 and gzip until needed</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># TODO: .zip support, .tar support?</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>class</span> <span class='nam'>_FileOpeners</span><span class='op'>(</span><span class='nam'>object</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_loaded</span> <span class='op'>=</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_file_openers</span> <span class='op'>=</span> <span class='op'>{</span><span class='nam'>None</span><span class='op'>:</span> <span class='nam'>open</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_load</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_loaded</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>bz2</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_file_openers</span><span class='op'>[</span><span class='str'>&quot;.bz2&quot;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>bz2</span><span class='op'>.</span><span class='nam'>BZ2File</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>ImportError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>gzip</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_file_openers</span><span class='op'>[</span><span class='str'>&quot;.gz&quot;</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>gzip</span><span class='op'>.</span><span class='nam'>open</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>ImportError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_loaded</span> <span class='op'>=</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>keys</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_load</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_file_openers</span><span class='op'>.</span><span class='nam'>keys</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__getitem__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>key</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_load</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_file_openers</span><span class='op'>[</span><span class='nam'>key</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>_file_openers</span> <span class='op'>=</span> <span class='nam'>_FileOpeners</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>open</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>=</span><span class='str'>&#39;r&#39;</span><span class='op'>,</span> <span class='nam'>destpath</span><span class='op'>=</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>curdir</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Open ``path`` with ``mode`` and return the file object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; If ``path`` is an URL, it will be downloaded, stored in the DataSource</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; directory and opened from there.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Parameters*:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : {string}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; mode : {string}, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; destpath : {string}, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Destination directory where URLs will be downloaded and stored.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Returns*:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; file object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>ds</span> <span class='op'>=</span> <span class='nam'>DataSource</span><span class='op'>(</span><span class='nam'>destpath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>ds</span><span class='op'>.</span><span class='nam'>open</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>class</span> <span class='nam'>DataSource</span> <span class='op'>(</span><span class='nam'>object</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;A generic data source file (file, http, ftp, ...).</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; DataSources could be local files or remote files/URLs.&nbsp; The files may</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; also be compressed or uncompressed.&nbsp; DataSource hides some of the low-level</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; details of downloading the file, allowing you to simply pass in a valid</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; file path (or URL) and obtain a file object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Methods*:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - exists : test if the file exists locally or remotely</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - abspath : get absolute path of the file in the DataSource directory</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - open : open the file</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Example URL DataSource*::</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Initialize DataSource with a local directory, default is os.curdir.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ds = DataSource(&#39;/home/guido&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Open remote file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # File will be downloaded and opened from here:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; #&nbsp; &nbsp;&nbsp; /home/guido/site/xyz.txt</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ds.open(&#39;http://fake.xyz.web/site/xyz.txt&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Example using DataSource for temporary files*::</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Initialize DataSource with &#39;None&#39; for the local directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ds = DataSource(None)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Open local file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Opened file exists in a temporary directory like:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; #&nbsp; &nbsp;&nbsp; /tmp/tmpUnhcvM/foobar.txt</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Temporary directories are deleted when the DataSource is deleted.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ds.open(&#39;/home/guido/foobar.txt&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Notes*:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; BUG : URLs require a scheme string (&#39;http://&#39;) to be used.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.google.com will fail.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt;&gt;&gt; repos.exists(&#39;www.google.com/index.html&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt;&gt;&gt; repos.exists(&#39;http://www.google.com/index.html&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>destpath</span><span class='op'>=</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>curdir</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Create a DataSource with a local path at destpath.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>destpath</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_destpath</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>destpath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_istmpdest</span> <span class='op'>=</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>tempfile</span> <span class='com'># deferring import to improve startup time</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_destpath</span> <span class='op'>=</span> <span class='nam'>tempfile</span><span class='op'>.</span><span class='nam'>mkdtemp</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_istmpdest</span> <span class='op'>=</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__del__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Remove temp directories</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_istmpdest</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>rmtree</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_destpath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_iszip</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>filename</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Test if the filename is a zip file by looking at the file extension.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fname</span><span class='op'>,</span> <span class='nam'>ext</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>splitext</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>ext</span> <span class='key'>in</span> <span class='nam'>_file_openers</span><span class='op'>.</span><span class='nam'>keys</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_iswritemode</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Test if the given mode will open a file for writing.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Currently only used to test the bz2 files.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>_writemodes</span> <span class='op'>=</span> <span class='op'>(</span><span class='str'>&quot;w&quot;</span><span class='op'>,</span> <span class='str'>&quot;+&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>c</span> <span class='key'>in</span> <span class='nam'>mode</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>c</span> <span class='key'>in</span> <span class='nam'>_writemodes</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_splitzipext</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>filename</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Split zip extension from filename and return filename.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; *Returns*:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; base, zip_ext : {tuple}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_iszip</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>splitext</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>filename</span><span class='op'>,</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_possible_names</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>filename</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Return a tuple containing compressed filename variations.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>names</span> <span class='op'>=</span> <span class='op'>[</span><span class='nam'>filename</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_iszip</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>zipext</span> <span class='key'>in</span> <span class='nam'>_file_openers</span><span class='op'>.</span><span class='nam'>keys</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>zipext</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>names</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='nam'>filename</span><span class='op'>+</span><span class='nam'>zipext</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>names</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Test if path is a net location.&nbsp; Tests the scheme and netloc.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We do this here to reduce the &#39;import numpy&#39; initial import time.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>from</span> <span class='nam'>urlparse</span> <span class='key'>import</span> <span class='nam'>urlparse</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># BUG : URLs require a scheme string (&#39;http://&#39;) to be used.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; www.google.com will fail.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; Should we prepend the scheme for those that don&#39;t have it and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; test that also?&nbsp; Similar to the way we append .gz and test for</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; for compressed versions of files.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>scheme</span><span class='op'>,</span> <span class='nam'>netloc</span><span class='op'>,</span> <span class='nam'>upath</span><span class='op'>,</span> <span class='nam'>uparams</span><span class='op'>,</span> <span class='nam'>uquery</span><span class='op'>,</span> <span class='nam'>ufrag</span> <span class='op'>=</span> <span class='nam'>urlparse</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>bool</span><span class='op'>(</span><span class='nam'>scheme</span> <span class='key'>and</span> <span class='nam'>netloc</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_cache</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Cache the file specified by path.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Creates a copy of the file in the datasource cache.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We import these here because importing urllib2 is slow and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># a significant fraction of numpy&#39;s total import time.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>from</span> <span class='nam'>urllib2</span> <span class='key'>import</span> <span class='nam'>urlopen</span><span class='op'>,</span> <span class='nam'>URLError</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>upath</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># ensure directory exists</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>exists</span><span class='op'>(</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>dirname</span><span class='op'>(</span><span class='nam'>upath</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>os</span><span class='op'>.</span><span class='nam'>makedirs</span><span class='op'>(</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>dirname</span><span class='op'>(</span><span class='nam'>upath</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># TODO: Doesn&#39;t handle compressed files!</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>openedurl</span> <span class='op'>=</span> <span class='nam'>urlopen</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>file</span><span class='op'>(</span><span class='nam'>upath</span><span class='op'>,</span> <span class='str'>&#39;w&#39;</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>openedurl</span><span class='op'>.</span><span class='nam'>read</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>URLError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>URLError</span><span class='op'>(</span><span class='str'>&quot;URL not found: %s&quot;</span> <span class='op'>%</span> <span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># TODO: Why not just copy the file with shutils.copyfile?</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fp</span> <span class='op'>=</span> <span class='nam'>file</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>,</span> <span class='str'>&#39;r&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>file</span><span class='op'>(</span><span class='nam'>upath</span><span class='op'>,</span> <span class='str'>&#39;w&#39;</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>write</span><span class='op'>(</span><span class='nam'>fp</span><span class='op'>.</span><span class='nam'>read</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>IOError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>IOError</span><span class='op'>(</span><span class='str'>&quot;File not found: %s&quot;</span> <span class='op'>%</span> <span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>upath</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_findfile</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Searches for ``path`` and returns full path if found.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If path is an URL, _findfile will cache a local copy and return</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; the path to the cached file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If path is a local file, _findfile will return a path to that local</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The search will include possible compressed versions of the file and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; return the first occurence found.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Build list of possible local file paths</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Valid local paths</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>filelist</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_possible_names</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Paths in self._destpath</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>filelist</span> <span class='op'>+=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_possible_names</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Cached URLs in self._destpath</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>filelist</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_possible_names</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Remote URLs</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>filelist</span> <span class='op'>=</span> <span class='nam'>filelist</span> <span class='op'>+</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_possible_names</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>name</span> <span class='key'>in</span> <span class='nam'>filelist</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>exists</span><span class='op'>(</span><span class='nam'>name</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>name</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>name</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_cache</span><span class='op'>(</span><span class='nam'>name</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>name</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Return absolute path of file in the DataSource directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If `path` is an URL, the ``abspath`` will be either the location</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; the file exists locally or the location it would exist when opened</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; using the ``open`` method.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The functionality is idential to os.path.abspath.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Can be a local file or a remote URL.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; out : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Complete path, rooted in the DataSource destination directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; open</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We do this here to reduce the &#39;import numpy&#39; initial import time.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>from</span> <span class='nam'>urlparse</span> <span class='key'>import</span> <span class='nam'>urlparse</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># TODO:&nbsp; This should be more robust.&nbsp; Handles case where path includes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp; &nbsp; the destpath, but not other sub-paths. Failing case:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp; &nbsp; path = /home/guido/datafile.txt</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp; &nbsp; destpath = /home/alex/</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp; &nbsp; upath = self.abspath(path)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp; &nbsp; upath == &#39;/home/alex/home/guido/datafile.txt&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># handle case where path includes self._destpath</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>splitpath</span> <span class='op'>=</span> <span class='nam'>path</span><span class='op'>.</span><span class='nam'>split</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_destpath</span><span class='op'>,</span> <span class='num'>2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>splitpath</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='num'>1</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>path</span> <span class='op'>=</span> <span class='nam'>splitpath</span><span class='op'>[</span><span class='num'>1</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>scheme</span><span class='op'>,</span> <span class='nam'>netloc</span><span class='op'>,</span> <span class='nam'>upath</span><span class='op'>,</span> <span class='nam'>uparams</span><span class='op'>,</span> <span class='nam'>uquery</span><span class='op'>,</span> <span class='nam'>ufrag</span> <span class='op'>=</span> <span class='nam'>urlparse</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>netloc</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_sanitize_relative_path</span><span class='op'>(</span><span class='nam'>netloc</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>upath</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_sanitize_relative_path</span><span class='op'>(</span><span class='nam'>upath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>join</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_destpath</span><span class='op'>,</span> <span class='nam'>netloc</span><span class='op'>,</span> <span class='nam'>upath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_sanitize_relative_path</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Return a sanitised relative path for which</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; os.path.abspath(os.path.join(base, path)).startswith(base)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>last</span> <span class='op'>=</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>path</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>normpath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>while</span> <span class='nam'>path</span> <span class='op'>!=</span> <span class='nam'>last</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>last</span> <span class='op'>=</span> <span class='nam'>path</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Note: os.path.join treats &#39;/&#39; as os.sep on Windows</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>path</span> <span class='op'>=</span> <span class='nam'>path</span><span class='op'>.</span><span class='nam'>lstrip</span><span class='op'>(</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>sep</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>lstrip</span><span class='op'>(</span><span class='str'>&#39;/&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>path</span> <span class='op'>=</span> <span class='nam'>path</span><span class='op'>.</span><span class='nam'>lstrip</span><span class='op'>(</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>pardir</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>lstrip</span><span class='op'>(</span><span class='str'>&#39;..&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>drive</span><span class='op'>,</span> <span class='nam'>path</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>splitdrive</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span> <span class='com'># for Windows</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>path</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>exists</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Test if path exists.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Test if `path` exists as (and in this order):</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - a local file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - a remote URL that have been downloaded and stored locally in the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DataSource directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - a remote URL that has not been downloaded, but is valid and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accessible.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Can be a local file or a remote URL.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; out : bool</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; True if `path` exists.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; abspath</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Notes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -----</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; When `path` is an URL, ``exist`` will return True if it&#39;s either stored</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; locally in the DataSource directory, or is a valid remote URL.&nbsp; DataSource</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; does not discriminate between to two, the file is accessible if it exists</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; in either location.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We import this here because importing urllib2 is slow and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># a significant fraction of numpy&#39;s total import time.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>from</span> <span class='nam'>urllib2</span> <span class='key'>import</span> <span class='nam'>urlopen</span><span class='op'>,</span> <span class='nam'>URLError</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Test local path</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>exists</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Test cached url</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>upath</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>exists</span><span class='op'>(</span><span class='nam'>upath</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Test remote url</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>netfile</span> <span class='op'>=</span> <span class='nam'>urlopen</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>del</span><span class='op'>(</span><span class='nam'>netfile</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>URLError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>open</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>=</span><span class='str'>&#39;r&#39;</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Open and return file-like object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If ``path`` is an URL, it will be downloaded, stored in the DataSource</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; directory and opened from there.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Local file path or URL to open</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; mode : {&#39;r&#39;, &#39;w&#39;, &#39;a&#39;}, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mode to open `path`.&nbsp; Mode &#39;r&#39; for reading, &#39;w&#39; for writing, &#39;a&#39; to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; append. Available modes depend on the type of object specified by</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `path`.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; out : file object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; File object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># TODO: There is no support for opening a file for writing which</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; doesn&#39;t exist yet (creating a file).&nbsp; Should there be?</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># TODO: Add a ``subdir`` parameter for specifying the subdirectory</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; used to store URLs in self._destpath.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span> <span class='key'>and</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_iswritemode</span><span class='op'>(</span><span class='nam'>mode</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='str'>&quot;URLs are not writeable&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># NOTE: _findfile will fail on a new file opened for writing.</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>found</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_findfile</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>found</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>_fname</span><span class='op'>,</span> <span class='nam'>ext</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_splitzipext</span><span class='op'>(</span><span class='nam'>found</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>ext</span> <span class='op'>==</span> <span class='str'>&#39;bz2&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>mode</span><span class='op'>.</span><span class='nam'>replace</span><span class='op'>(</span><span class='str'>&quot;+&quot;</span><span class='op'>,</span> <span class='str'>&quot;&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>_file_openers</span><span class='op'>[</span><span class='nam'>ext</span><span class='op'>]</span><span class='op'>(</span><span class='nam'>found</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>=</span><span class='nam'>mode</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>IOError</span><span class='op'>(</span><span class='str'>&quot;%s not found.&quot;</span> <span class='op'>%</span> <span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>class</span> <span class='nam'>Repository</span> <span class='op'>(</span><span class='nam'>DataSource</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; A data Repository where multiple DataSource&#39;s share a base URL/directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Repository extends DataSource by prepending a base URL (or directory) to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; all the files it handles. Use a Repository when you will be working with</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; multiple files from one base URL.&nbsp; Initialize the Respository with the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; base URL, then refer to each file by its filename only.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Methods*:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - exists : test if the file exists locally or remotely</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - abspath : get absolute path of the file in the DataSource directory</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - open : open the file</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; *Toy example*::</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Analyze all files in the repository.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; repos = Repository(&#39;/home/user/data/dir/&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; for filename in filelist:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fp = repos.open(filename)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fp.analyze()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fp.close()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; # Similarly you could use a URL for a repository.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; repos = Repository(&#39;http://www.xyz.edu/data&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>baseurl</span><span class='op'>,</span> <span class='nam'>destpath</span><span class='op'>=</span><span class='nam'>os</span><span class='op'>.</span><span class='nam'>curdir</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Create a Repository with a shared url or directory of baseurl.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>DataSource</span><span class='op'>.</span><span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>destpath</span><span class='op'>=</span><span class='nam'>destpath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_baseurl</span> <span class='op'>=</span> <span class='nam'>baseurl</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__del__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>DataSource</span><span class='op'>.</span><span class='nam'>__del__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_fullpath</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Return complete path for path.&nbsp; Prepends baseurl if necessary.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>splitpath</span> <span class='op'>=</span> <span class='nam'>path</span><span class='op'>.</span><span class='nam'>split</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_baseurl</span><span class='op'>,</span> <span class='num'>2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>splitpath</span><span class='op'>)</span> <span class='op'>==</span> <span class='num'>1</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>result</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>join</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_baseurl</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>result</span> <span class='op'>=</span> <span class='nam'>path</span>&nbsp; &nbsp; <span class='com'># path contains baseurl already</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>result</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_findfile</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Extend DataSource method to prepend baseurl to ``path``.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>DataSource</span><span class='op'>.</span><span class='nam'>_findfile</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_fullpath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Return absolute path of file in the Repository directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If `path` is an URL, the ``abspath`` will be either the location</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; the file exists locally or the location it would exist when opened</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; using the ``open`` method.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The functionality is idential to os.path.abspath.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Can be a local file or a remote URL.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; out : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Complete path, rooted in the DataSource destination directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; open</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>DataSource</span><span class='op'>.</span><span class='nam'>abspath</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_fullpath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>exists</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Test if path exists prepending Repository base URL to path.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Test if `path` exists as (and in this order):</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - a local file.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - a remote URL that have been downloaded and stored locally in the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DataSource directory.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; - a remote URL that has not been downloaded, but is valid and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accessible.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Can be a local file or a remote URL.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; out : bool</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; True if `path` exists.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; abspath</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Notes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -----</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; When `path` is an URL, ``exist`` will return True if it&#39;s either stored</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; locally in the DataSource directory, or is a valid remote URL.&nbsp; DataSource</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; does not discriminate between to two, the file is accessible if it exists</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; in either location.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>DataSource</span><span class='op'>.</span><span class='nam'>exists</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_fullpath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>open</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>path</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>=</span><span class='str'>&#39;r&#39;</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Open and return file-like object prepending Repository base URL.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; If `path` is an URL, it will be downloaded, stored in the DataSource</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; directory and opened from there.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; path : string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Local file path or URL to open</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; mode : {&#39;r&#39;, &#39;w&#39;, &#39;a&#39;}, optional</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mode to open `path`.&nbsp; Mode &#39;r&#39; for reading, &#39;w&#39; for writing, &#39;a&#39; to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; append. Available modes depend on the type of object specified by</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `path`.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; out : file object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; File object.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>DataSource</span><span class='op'>.</span><span class='nam'>open</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_fullpath</span><span class='op'>(</span><span class='nam'>path</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>mode</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>listdir</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; List files in the source Repository.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Returns</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; files : list of str</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of file names (not containing a directory part).</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Notes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; -----</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Does not currently work for remote repositories.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_isurl</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_baseurl</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>NotImplementedError</span><span class='op'>,</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;Directory listing of URLs, not supported yet.&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>listdir</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>_baseurl</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

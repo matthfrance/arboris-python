@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/testing/nosetester</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/testing/nosetester</b> :
+            <span class='pc_cov'>24%</span>
+        </h1>
+        <h2 class='stats'>
+            148 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>35 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>113 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='pln'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='pln'>4</p>
+<p class='pln'>5</p>
+<p class='stm run hide_run'>6</p>
+<p class='stm run hide_run'>7</p>
+<p class='stm run hide_run'>8</p>
+<p class='pln'>9</p>
+<p class='stm run hide_run'>10</p>
+<p class='pln'>11</p>
+<p class='stm run hide_run'>12</p>
+<p class='stm run hide_run'>13</p>
+<p class='stm run hide_run'>14</p>
+<p class='stm mis'>15</p>
+<p class='stm mis'>16</p>
+<p class='stm mis'>17</p>
+<p class='stm mis'>18</p>
+<p class='pln'>19</p>
+<p class='pln'>20</p>
+<p class='stm run hide_run'>21</p>
+<p class='stm run hide_run'>22</p>
+<p class='stm mis'>23</p>
+<p class='pln'>24</p>
+<p class='stm run hide_run'>25</p>
+<p class='pln'>26</p>
+<p class='pln'>27</p>
+<p class='stm mis'>28</p>
+<p class='stm mis'>29</p>
+<p class='pln'>30</p>
+<p class='pln'>31</p>
+<p class='stm run hide_run'>32</p>
+<p class='pln'>33</p>
+<p class='pln'>34</p>
+<p class='stm mis'>35</p>
+<p class='stm mis'>36</p>
+<p class='stm mis'>37</p>
+<p class='stm mis'>38</p>
+<p class='stm mis'>39</p>
+<p class='stm mis'>40</p>
+<p class='stm mis'>41</p>
+<p class='pln'>42</p>
+<p class='stm mis'>43</p>
+<p class='stm mis'>44</p>
+<p class='pln'>45</p>
+<p class='stm mis'>46</p>
+<p class='stm mis'>47</p>
+<p class='pln'>48</p>
+<p class='pln'>49</p>
+<p class='pln'>50</p>
+<p class='stm mis'>51</p>
+<p class='pln'>52</p>
+<p class='stm mis'>53</p>
+<p class='pln'>54</p>
+<p class='stm run hide_run'>55</p>
+<p class='stm mis'>56</p>
+<p class='stm mis'>57</p>
+<p class='stm mis'>58</p>
+<p class='stm mis'>59</p>
+<p class='pln'>60</p>
+<p class='stm mis'>61</p>
+<p class='pln'>62</p>
+<p class='pln'>63</p>
+<p class='stm run hide_run'>64</p>
+<p class='stm run hide_run'>65</p>
+<p class='stm mis'>66</p>
+<p class='pln'>67</p>
+<p class='stm run hide_run'>68</p>
+<p class='pln'>69</p>
+<p class='pln'>70</p>
+<p class='pln'>71</p>
+<p class='pln'>72</p>
+<p class='pln'>73</p>
+<p class='pln'>74</p>
+<p class='pln'>75</p>
+<p class='pln'>76</p>
+<p class='pln'>77</p>
+<p class='pln'>78</p>
+<p class='pln'>79</p>
+<p class='pln'>80</p>
+<p class='pln'>81</p>
+<p class='pln'>82</p>
+<p class='pln'>83</p>
+<p class='pln'>84</p>
+<p class='pln'>85</p>
+<p class='pln'>86</p>
+<p class='pln'>87</p>
+<p class='stm run hide_run'>88</p>
+<p class='pln'>89</p>
+<p class='pln'>90</p>
+<p class='stm run hide_run'>91</p>
+<p class='pln'>92</p>
+<p class='pln'>93</p>
+<p class='pln'>94</p>
+<p class='pln'>95</p>
+<p class='pln'>96</p>
+<p class='pln'>97</p>
+<p class='pln'>98</p>
+<p class='pln'>99</p>
+<p class='pln'>100</p>
+<p class='pln'>101</p>
+<p class='pln'>102</p>
+<p class='pln'>103</p>
+<p class='pln'>104</p>
+<p class='pln'>105</p>
+<p class='pln'>106</p>
+<p class='pln'>107</p>
+<p class='pln'>108</p>
+<p class='pln'>109</p>
+<p class='stm run hide_run'>110</p>
+<p class='pln'>111</p>
+<p class='pln'>112</p>
+<p class='pln'>113</p>
+<p class='pln'>114</p>
+<p class='pln'>115</p>
+<p class='pln'>116</p>
+<p class='pln'>117</p>
+<p class='pln'>118</p>
+<p class='pln'>119</p>
+<p class='stm run hide_run'>120</p>
+<p class='stm run hide_run'>121</p>
+<p class='stm run hide_run'>122</p>
+<p class='stm run hide_run'>123</p>
+<p class='stm run hide_run'>124</p>
+<p class='stm mis'>125</p>
+<p class='stm mis'>126</p>
+<p class='stm run hide_run'>127</p>
+<p class='pln'>128</p>
+<p class='pln'>129</p>
+<p class='pln'>130</p>
+<p class='stm run hide_run'>131</p>
+<p class='pln'>132</p>
+<p class='stm run hide_run'>133</p>
+<p class='pln'>134</p>
+<p class='pln'>135</p>
+<p class='pln'>136</p>
+<p class='pln'>137</p>
+<p class='stm mis'>138</p>
+<p class='stm mis'>139</p>
+<p class='stm mis'>140</p>
+<p class='stm mis'>141</p>
+<p class='stm mis'>142</p>
+<p class='stm mis'>143</p>
+<p class='stm mis'>144</p>
+<p class='stm mis'>145</p>
+<p class='stm mis'>146</p>
+<p class='stm mis'>147</p>
+<p class='stm mis'>148</p>
+<p class='pln'>149</p>
+<p class='stm run hide_run'>150</p>
+<p class='stm mis'>151</p>
+<p class='pln'>152</p>
+<p class='stm mis'>153</p>
+<p class='stm mis'>154</p>
+<p class='stm mis'>155</p>
+<p class='stm mis'>156</p>
+<p class='pln'>157</p>
+<p class='stm mis'>158</p>
+<p class='stm mis'>159</p>
+<p class='stm mis'>160</p>
+<p class='stm mis'>161</p>
+<p class='stm mis'>162</p>
+<p class='pln'>163</p>
+<p class='stm mis'>164</p>
+<p class='stm mis'>165</p>
+<p class='stm mis'>166</p>
+<p class='pln'>167</p>
+<p class='pln'>168</p>
+<p class='stm run hide_run'>169</p>
+<p class='pln'>170</p>
+<p class='pln'>171</p>
+<p class='pln'>172</p>
+<p class='pln'>173</p>
+<p class='pln'>174</p>
+<p class='pln'>175</p>
+<p class='pln'>176</p>
+<p class='pln'>177</p>
+<p class='pln'>178</p>
+<p class='pln'>179</p>
+<p class='pln'>180</p>
+<p class='pln'>181</p>
+<p class='stm mis'>182</p>
+<p class='pln'>183</p>
+<p class='stm mis'>184</p>
+<p class='stm mis'>185</p>
+<p class='stm mis'>186</p>
+<p class='stm mis'>187</p>
+<p class='pln'>188</p>
+<p class='pln'>189</p>
+<p class='pln'>190</p>
+<p class='stm mis'>191</p>
+<p class='stm mis'>192</p>
+<p class='pln'>193</p>
+<p class='pln'>194</p>
+<p class='pln'>195</p>
+<p class='pln'>196</p>
+<p class='pln'>197</p>
+<p class='pln'>198</p>
+<p class='pln'>199</p>
+<p class='pln'>200</p>
+<p class='pln'>201</p>
+<p class='stm mis'>202</p>
+<p class='stm mis'>203</p>
+<p class='pln'>204</p>
+<p class='stm mis'>205</p>
+<p class='pln'>206</p>
+<p class='stm mis'>207</p>
+<p class='stm mis'>208</p>
+<p class='pln'>209</p>
+<p class='pln'>210</p>
+<p class='stm mis'>211</p>
+<p class='stm mis'>212</p>
+<p class='stm mis'>213</p>
+<p class='pln'>214</p>
+<p class='pln'>215</p>
+<p class='pln'>216</p>
+<p class='stm mis'>217</p>
+<p class='stm mis'>218</p>
+<p class='stm mis'>219</p>
+<p class='pln'>220</p>
+<p class='stm mis'>221</p>
+<p class='stm mis'>222</p>
+<p class='stm mis'>223</p>
+<p class='stm mis'>224</p>
+<p class='pln'>225</p>
+<p class='stm mis'>226</p>
+<p class='pln'>227</p>
+<p class='stm mis'>228</p>
+<p class='stm mis'>229</p>
+<p class='pln'>230</p>
+<p class='pln'>231</p>
+<p class='pln'>232</p>
+<p class='stm mis'>233</p>
+<p class='stm mis'>234</p>
+<p class='stm mis'>235</p>
+<p class='stm mis'>236</p>
+<p class='stm mis'>237</p>
+<p class='stm mis'>238</p>
+<p class='pln'>239</p>
+<p class='stm mis'>240</p>
+<p class='pln'>241</p>
+<p class='stm mis'>242</p>
+<p class='pln'>243</p>
+<p class='pln'>244</p>
+<p class='pln'>245</p>
+<p class='pln'>246</p>
+<p class='stm mis'>247</p>
+<p class='stm mis'>248</p>
+<p class='pln'>249</p>
+<p class='pln'>250</p>
+<p class='pln'>251</p>
+<p class='stm mis'>252</p>
+<p class='stm mis'>253</p>
+<p class='pln'>254</p>
+<p class='pln'>255</p>
+<p class='stm mis'>256</p>
+<p class='stm mis'>257</p>
+<p class='stm mis'>258</p>
+<p class='stm mis'>259</p>
+<p class='stm mis'>260</p>
+<p class='stm mis'>261</p>
+<p class='pln'>262</p>
+<p class='pln'>263</p>
+<p class='stm mis'>264</p>
+<p class='stm mis'>265</p>
+<p class='pln'>266</p>
+<p class='pln'>267</p>
+<p class='stm mis'>268</p>
+<p class='stm mis'>269</p>
+<p class='stm mis'>270</p>
+<p class='stm mis'>271</p>
+<p class='stm mis'>272</p>
+<p class='stm mis'>273</p>
+<p class='stm mis'>274</p>
+<p class='pln'>275</p>
+<p class='stm mis'>276</p>
+<p class='pln'>277</p>
+<p class='stm mis'>278</p>
+<p class='stm mis'>279</p>
+<p class='pln'>280</p>
+<p class='stm run hide_run'>281</p>
+<p class='pln'>282</p>
+<p class='pln'>283</p>
+<p class='pln'>284</p>
+<p class='pln'>285</p>
+<p class='stm mis'>286</p>
+<p class='stm mis'>287</p>
+<p class='pln'>288</p>
+<p class='stm mis'>289</p>
+<p class='stm mis'>290</p>
+<p class='stm mis'>291</p>
+<p class='stm mis'>292</p>
+<p class='pln'>293</p>
+<p class='pln'>294</p>
+<p class='stm run hide_run'>295</p>
+<p class='stm run hide_run'>296</p>
+<p class='stm run hide_run'>297</p>
+<p class='pln'>298</p>
+<p class='pln'>299</p>
+<p class='pln'>300</p>
+<p class='pln'>301</p>
+<p class='pln'>302</p>
+<p class='pln'>303</p>
+<p class='stm run hide_run'>304</p>
+<p class='pln'>305</p>
+<p class='pln'>306</p>
+<p class='pln'>307</p>
+<p class='pln'>308</p>
+<p class='pln'>309</p>
+<p class='pln'>310</p>
+<p class='stm run hide_run'>311</p>
+<p class='pln'>312</p>
+<p class='pln'>313</p>
+<p class='pln'>314</p>
+<p class='pln'>315</p>
+<p class='pln'>316</p>
+<p class='pln'>317</p>
+<p class='stm run hide_run'>318</p>
+<p class='pln'>319</p>
+<p class='pln'>320</p>
+<p class='pln'>321</p>
+<p class='pln'>322</p>
+<p class='pln'>323</p>
+<p class='pln'>324</p>
+<p class='pln'>325</p>
+<p class='pln'>326</p>
+<p class='pln'>327</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='pln'><span class='str'>&#39;&#39;&#39; Nose test running</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Implements test and bench functions for modules.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>os</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>sys</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>warnings</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>get_package_name</span><span class='op'>(</span><span class='nam'>filepath</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># find the package name given a path name that&#39;s part of the package</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>fullpath</span> <span class='op'>=</span> <span class='nam'>filepath</span><span class='op'>[</span><span class='op'>:</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>pkg_name</span> <span class='op'>=</span> <span class='op'>[</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>while</span> <span class='str'>&#39;site-packages&#39;</span> <span class='key'>in</span> <span class='nam'>filepath</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>filepath</span><span class='op'>,</span> <span class='nam'>p2</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>split</span><span class='op'>(</span><span class='nam'>filepath</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>p2</span> <span class='op'>==</span> <span class='str'>&#39;site-packages&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>break</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>pkg_name</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='nam'>p2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># if package name determination failed, just default to numpy/scipy</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>pkg_name</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='str'>&#39;scipy&#39;</span> <span class='key'>in</span> <span class='nam'>fullpath</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='str'>&#39;scipy&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='str'>&#39;numpy&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># otherwise, reverse to get correct order and return</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>pkg_name</span><span class='op'>.</span><span class='nam'>reverse</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='str'>&#39;.&#39;</span><span class='op'>.</span><span class='nam'>join</span><span class='op'>(</span><span class='nam'>pkg_name</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>import_nose</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot; Import nose only when needed.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>fine_nose</span> <span class='op'>=</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>minimum_nose_version</span> <span class='op'>=</span> <span class='op'>(</span><span class='num'>0</span><span class='op'>,</span><span class='num'>10</span><span class='op'>,</span><span class='num'>0</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>nose</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>from</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>tools</span> <span class='key'>import</span> <span class='nam'>raises</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>ImportError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fine_nose</span> <span class='op'>=</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>__versioninfo__</span> <span class='op'>&lt;</span> <span class='nam'>minimum_nose_version</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fine_nose</span> <span class='op'>=</span> <span class='nam'>False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>fine_nose</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>msg</span> <span class='op'>=</span> <span class='str'>&#39;Need nose &gt;= %d.%d.%d for tests - see &#39;</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;http://somethingaboutorange.com/mrl/projects/nose&#39;</span> <span class='op'>%</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>minimum_nose_version</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ImportError</span><span class='op'>(</span><span class='nam'>msg</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>nose</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>run_module_suite</span><span class='op'>(</span><span class='nam'>file_to_run</span> <span class='op'>=</span> <span class='nam'>None</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>file_to_run</span> <span class='key'>is</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>f</span> <span class='op'>=</span> <span class='nam'>sys</span><span class='op'>.</span><span class='nam'>_getframe</span><span class='op'>(</span><span class='num'>1</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>file_to_run</span> <span class='op'>=</span> <span class='nam'>f</span><span class='op'>.</span><span class='nam'>f_locals</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='str'>&#39;__file__&#39;</span><span class='op'>,</span> <span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>assert</span> <span class='nam'>file_to_run</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>import_nose</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>run</span><span class='op'>(</span><span class='nam'>argv</span><span class='op'>=</span><span class='op'>[</span><span class='str'>&#39;&#39;</span><span class='op'>,</span><span class='nam'>file_to_run</span><span class='op'>]</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># contructs NoseTester method docstrings</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>_docmethod</span><span class='op'>(</span><span class='nam'>meth</span><span class='op'>,</span> <span class='nam'>testtype</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>meth</span><span class='op'>.</span><span class='nam'>__doc__</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>test_header</span> <span class='op'>=</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;&#39;&#39;Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; label : {&#39;fast&#39;, &#39;full&#39;, &#39;&#39;, attribute identifer}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Identifies the %(testtype)ss to run.&nbsp; This can be a string to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass to the nosetests executable with the &#39;-A&#39; option, or one of</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; several special values.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Special values are:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;fast&#39; - the default - which corresponds to nosetests -A option</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; of &#39;not slow&#39;.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;full&#39; - fast (as above) and slow %(testtype)ss as in the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; no -A option to nosetests - same as &#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; None or &#39;&#39; - run all %(testtype)ss</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attribute_identifier - string passed directly to nosetests as &#39;-A&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; verbose : integer</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; verbosity value for test outputs, 1-10</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; extra_argv : list</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List with any extra args to pass to nosetests&#39;&#39;&#39;</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>%</span> <span class='op'>{</span><span class='str'>&#39;testtype&#39;</span><span class='op'>:</span> <span class='nam'>testtype</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>meth</span><span class='op'>.</span><span class='nam'>__doc__</span> <span class='op'>=</span> <span class='nam'>meth</span><span class='op'>.</span><span class='nam'>__doc__</span> <span class='op'>%</span> <span class='op'>{</span><span class='str'>&#39;test_header&#39;</span><span class='op'>:</span><span class='nam'>test_header</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>class</span> <span class='nam'>NoseTester</span><span class='op'>(</span><span class='nam'>object</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot; Nose test runner.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Usage: NoseTester(&lt;package&gt;).test()</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &lt;package&gt; is package path or module Default for package is None. A</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; value of None finds the calling module path.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; This class is made available as numpy.testing.Tester, and a test function</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; is typically added to a package&#39;s __init__.py like so:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; from numpy.testing import Tester</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; test = Tester().test</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Calling this test function finds and runs all tests associated with the</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; package and all its subpackages.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>package</span><span class='op'>=</span><span class='nam'>None</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;&#39;&#39; Test class init</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; package : string or module</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If string, gives full path to package</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If None, extract calling module path</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Default is None</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>package</span> <span class='key'>is</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>f</span> <span class='op'>=</span> <span class='nam'>sys</span><span class='op'>.</span><span class='nam'>_getframe</span><span class='op'>(</span><span class='num'>1</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>package</span> <span class='op'>=</span> <span class='nam'>f</span><span class='op'>.</span><span class='nam'>f_locals</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='str'>&#39;__file__&#39;</span><span class='op'>,</span> <span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>assert</span> <span class='nam'>package</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>package</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>dirname</span><span class='op'>(</span><span class='nam'>package</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>elif</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>package</span><span class='op'>,</span> <span class='nam'>type</span><span class='op'>(</span><span class='nam'>os</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>package</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>dirname</span><span class='op'>(</span><span class='nam'>package</span><span class='op'>.</span><span class='nam'>__file__</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_path</span> <span class='op'>=</span> <span class='nam'>package</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># find the package name under test; this name is used to limit coverage</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># reporting (if enabled)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_name</span> <span class='op'>=</span> <span class='nam'>get_package_name</span><span class='op'>(</span><span class='nam'>package</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_test_argv</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>label</span><span class='op'>,</span> <span class='nam'>verbose</span><span class='op'>,</span> <span class='nam'>extra_argv</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;&#39;&#39; Generate argv for nosetest command</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; %(test_header)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>=</span> <span class='op'>[</span><span class='nam'>__file__</span><span class='op'>,</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_path</span><span class='op'>,</span> <span class='str'>&#39;-s&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>label</span> <span class='key'>and</span> <span class='nam'>label</span> <span class='op'>!=</span> <span class='str'>&#39;full&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>label</span><span class='op'>,</span> <span class='nam'>basestring</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>TypeError</span><span class='op'>,</span> <span class='str'>&#39;Selection label should be a string&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>label</span> <span class='op'>==</span> <span class='str'>&#39;fast&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>label</span> <span class='op'>=</span> <span class='str'>&#39;not slow&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;-A&#39;</span><span class='op'>,</span> <span class='nam'>label</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--verbosity&#39;</span><span class='op'>,</span> <span class='nam'>str</span><span class='op'>(</span><span class='nam'>verbose</span><span class='op'>)</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>extra_argv</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='nam'>extra_argv</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>argv</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_show_system_info</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>nose</span> <span class='op'>=</span> <span class='nam'>import_nose</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>numpy</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;NumPy version %s&quot;</span> <span class='op'>%</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>__version__</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>npdir</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>dirname</span><span class='op'>(</span><span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>__file__</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;NumPy is installed in %s&quot;</span> <span class='op'>%</span> <span class='nam'>npdir</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='str'>&#39;scipy&#39;</span> <span class='key'>in</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_name</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>scipy</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;SciPy version %s&quot;</span> <span class='op'>%</span> <span class='nam'>scipy</span><span class='op'>.</span><span class='nam'>__version__</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>spdir</span> <span class='op'>=</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>path</span><span class='op'>.</span><span class='nam'>dirname</span><span class='op'>(</span><span class='nam'>scipy</span><span class='op'>.</span><span class='nam'>__file__</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;SciPy is installed in %s&quot;</span> <span class='op'>%</span> <span class='nam'>spdir</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>pyversion</span> <span class='op'>=</span> <span class='nam'>sys</span><span class='op'>.</span><span class='nam'>version</span><span class='op'>.</span><span class='nam'>replace</span><span class='op'>(</span><span class='str'>&#39;\n&#39;</span><span class='op'>,</span><span class='str'>&#39;&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;Python version %s&quot;</span> <span class='op'>%</span> <span class='nam'>pyversion</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;nose version %d.%d.%d&quot;</span> <span class='op'>%</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>__versioninfo__</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>label</span><span class='op'>=</span><span class='str'>&#39;fast&#39;</span><span class='op'>,</span> <span class='nam'>verbose</span><span class='op'>=</span><span class='num'>1</span><span class='op'>,</span> <span class='nam'>extra_argv</span><span class='op'>=</span><span class='nam'>None</span><span class='op'>,</span> <span class='nam'>doctests</span><span class='op'>=</span><span class='nam'>False</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>coverage</span><span class='op'>=</span><span class='nam'>False</span><span class='op'>,</span> <span class='op'>**</span><span class='nam'>kwargs</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;&#39;&#39; Run tests for module using nose</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; %(test_header)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; doctests : boolean</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If True, run doctests in module, default False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; coverage : boolean</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If True, report coverage of NumPy code, default False</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Requires the coverage module:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; http://nedbatchelder.com/code/modules/coverage.html)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>old_args</span> <span class='op'>=</span> <span class='nam'>set</span><span class='op'>(</span><span class='op'>[</span><span class='str'>&#39;level&#39;</span><span class='op'>,</span> <span class='str'>&#39;verbosity&#39;</span><span class='op'>,</span> <span class='str'>&#39;all&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys_argv&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;testcase_pattern&#39;</span><span class='op'>]</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>unexpected_args</span> <span class='op'>=</span> <span class='nam'>set</span><span class='op'>(</span><span class='nam'>kwargs</span><span class='op'>.</span><span class='nam'>keys</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>-</span> <span class='nam'>old_args</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>unexpected_args</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='num'>0</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>ua</span> <span class='op'>=</span> <span class='str'>&#39;, &#39;</span><span class='op'>.</span><span class='nam'>join</span><span class='op'>(</span><span class='nam'>unexpected_args</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>TypeError</span><span class='op'>(</span><span class='str'>&quot;test() got unexpected arguments: %s&quot;</span> <span class='op'>%</span> <span class='nam'>ua</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># issue a deprecation warning if any of the pre-1.2 arguments to</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># test are given</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>old_args</span><span class='op'>.</span><span class='nam'>intersection</span><span class='op'>(</span><span class='nam'>kwargs</span><span class='op'>.</span><span class='nam'>keys</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>warnings</span><span class='op'>.</span><span class='nam'>warn</span><span class='op'>(</span><span class='str'>&quot;This method&#39;s signature will change in the next &quot;</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;release; the level, verbosity, all, sys_argv, &quot;</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;and testcase_pattern keyword arguments will be &quot;</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;removed. Please update your code.&quot;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>DeprecationWarning</span><span class='op'>,</span> <span class='nam'>stacklevel</span><span class='op'>=</span><span class='num'>2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Use old arguments if given (where it makes sense)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># For the moment, level and sys_argv are ignored</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># replace verbose with verbosity</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>kwargs</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='str'>&#39;verbosity&#39;</span><span class='op'>)</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>verbose</span> <span class='op'>=</span> <span class='nam'>kwargs</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='str'>&#39;verbosity&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># cap verbosity at 3 because nose becomes *very* verbose beyond that</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>verbose</span> <span class='op'>=</span> <span class='nam'>min</span><span class='op'>(</span><span class='nam'>verbose</span><span class='op'>,</span> <span class='num'>3</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>utils</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>utils</span><span class='op'>.</span><span class='nam'>verbose</span> <span class='op'>=</span> <span class='nam'>verbose</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># if all evaluates as True, omit attribute filter and run doctests</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>kwargs</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='str'>&#39;all&#39;</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>label</span> <span class='op'>=</span> <span class='str'>&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>doctests</span> <span class='op'>=</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># if doctests is in the extra args, remove it and set the doctest</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># flag so the NumPy doctester is used instead</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>extra_argv</span> <span class='key'>and</span> <span class='str'>&#39;--with-doctest&#39;</span> <span class='key'>in</span> <span class='nam'>extra_argv</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>extra_argv</span><span class='op'>.</span><span class='nam'>remove</span><span class='op'>(</span><span class='str'>&#39;--with-doctest&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>doctests</span> <span class='op'>=</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_test_argv</span><span class='op'>(</span><span class='nam'>label</span><span class='op'>,</span> <span class='nam'>verbose</span><span class='op'>,</span> <span class='nam'>extra_argv</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>doctests</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--with-numpydoctest&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;Running unit tests and doctests for %s&quot;</span> <span class='op'>%</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_name</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;Running unit tests for %s&quot;</span> <span class='op'>%</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_name</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>coverage</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span><span class='op'>+=</span><span class='op'>[</span><span class='str'>&#39;--cover-package=%s&#39;</span> <span class='op'>%</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_name</span><span class='op'>,</span> <span class='str'>&#39;--with-coverage&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>&#39;--cover-tests&#39;</span><span class='op'>,</span> <span class='str'>&#39;--cover-inclusive&#39;</span><span class='op'>,</span> <span class='str'>&#39;--cover-erase&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># bypass these samples under distutils</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--exclude&#39;</span><span class='op'>,</span><span class='str'>&#39;f2py_ext&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--exclude&#39;</span><span class='op'>,</span><span class='str'>&#39;f2py_f90_ext&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--exclude&#39;</span><span class='op'>,</span><span class='str'>&#39;gen_ext&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--exclude&#39;</span><span class='op'>,</span><span class='str'>&#39;pyrex_ext&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--exclude&#39;</span><span class='op'>,</span><span class='str'>&#39;swig_ext&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--exclude&#39;</span><span class='op'>,</span><span class='str'>&#39;array_from_pyobj&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_show_system_info</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>nose</span> <span class='op'>=</span> <span class='nam'>import_nose</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Because nose currently discards the test result object, but we need</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># to return it to the user, override TestProgram.runTests to retain</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># the result</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>class</span> <span class='nam'>NumpyTestProgram</span><span class='op'>(</span><span class='nam'>nose</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>TestProgram</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>runTests</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Run Tests. Returns true on success, false on failure, and</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sets self.success to the same value.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>testRunner</span> <span class='key'>is</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>testRunner</span> <span class='op'>=</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>TextTestRunner</span><span class='op'>(</span><span class='nam'>stream</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>config</span><span class='op'>.</span><span class='nam'>stream</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>verbosity</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>config</span><span class='op'>.</span><span class='nam'>verbosity</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>config</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>config</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>plug_runner</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>config</span><span class='op'>.</span><span class='nam'>plugins</span><span class='op'>.</span><span class='nam'>prepareTestRunner</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>testRunner</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>plug_runner</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>testRunner</span> <span class='op'>=</span> <span class='nam'>plug_runner</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>result</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>testRunner</span><span class='op'>.</span><span class='nam'>run</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>test</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>success</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>result</span><span class='op'>.</span><span class='nam'>wasSuccessful</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>success</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># reset doctest state on every run</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>doctest</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>doctest</span><span class='op'>.</span><span class='nam'>master</span> <span class='op'>=</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># construct list of plugins, omitting the existing doctest plugin</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>import</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>plugins</span><span class='op'>.</span><span class='nam'>builtin</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>from</span> <span class='nam'>noseclasses</span> <span class='key'>import</span> <span class='nam'>NumpyDoctest</span><span class='op'>,</span> <span class='nam'>KnownFailure</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>plugins</span> <span class='op'>=</span> <span class='op'>[</span><span class='nam'>NumpyDoctest</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>KnownFailure</span><span class='op'>(</span><span class='op'>)</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>p</span> <span class='key'>in</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>plugins</span><span class='op'>.</span><span class='nam'>builtin</span><span class='op'>.</span><span class='nam'>plugins</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>plug</span> <span class='op'>=</span> <span class='nam'>p</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>plug</span><span class='op'>.</span><span class='nam'>name</span> <span class='op'>==</span> <span class='str'>&#39;doctest&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>continue</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>plugins</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='nam'>plug</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>t</span> <span class='op'>=</span> <span class='nam'>NumpyTestProgram</span><span class='op'>(</span><span class='nam'>argv</span><span class='op'>=</span><span class='nam'>argv</span><span class='op'>,</span> <span class='nam'>exit</span><span class='op'>=</span><span class='nam'>False</span><span class='op'>,</span> <span class='nam'>plugins</span><span class='op'>=</span><span class='nam'>plugins</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>t</span><span class='op'>.</span><span class='nam'>result</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>bench</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>label</span><span class='op'>=</span><span class='str'>&#39;fast&#39;</span><span class='op'>,</span> <span class='nam'>verbose</span><span class='op'>=</span><span class='num'>1</span><span class='op'>,</span> <span class='nam'>extra_argv</span><span class='op'>=</span><span class='nam'>None</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;&#39;&#39; Run benchmarks for module using nose</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; %(test_header)s&#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&quot;Running benchmarks for %s&quot;</span> <span class='op'>%</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>package_name</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_show_system_info</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>nose</span> <span class='op'>=</span> <span class='nam'>import_nose</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_test_argv</span><span class='op'>(</span><span class='nam'>label</span><span class='op'>,</span> <span class='nam'>verbose</span><span class='op'>,</span> <span class='nam'>extra_argv</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>argv</span> <span class='op'>+=</span> <span class='op'>[</span><span class='str'>&#39;--match&#39;</span><span class='op'>,</span> <span class='str'>r&#39;(?:^|[\\b_\\.%s-])[Bb]ench&#39;</span> <span class='op'>%</span> <span class='nam'>os</span><span class='op'>.</span><span class='nam'>sep</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>nose</span><span class='op'>.</span><span class='nam'>run</span><span class='op'>(</span><span class='nam'>argv</span><span class='op'>=</span><span class='nam'>argv</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='com'># generate method docstrings</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>_docmethod</span><span class='op'>(</span><span class='nam'>_test_argv</span><span class='op'>,</span> <span class='str'>&#39;(testtype)&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>_docmethod</span><span class='op'>(</span><span class='nam'>test</span><span class='op'>,</span> <span class='str'>&#39;test&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>_docmethod</span><span class='op'>(</span><span class='nam'>bench</span><span class='op'>,</span> <span class='str'>&#39;benchmark&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'>########################################################################</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># Doctests for NumPy-specific nose/doctest modifications</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># try the #random directive on the output line</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>check_random_directive</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; 2+2</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &lt;BadExample object at 0x084D05AC&gt;&nbsp; #random: may vary on your system</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># check the implicit &quot;import numpy as np&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>check_implicit_np</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; np.array([1,2,3])</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; array([1, 2, 3])</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># there&#39;s some extraneous whitespace around the correct responses</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>check_whitespace_enabled</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; # whitespace after the 3</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; 1+2</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; 3</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; # whitespace before the 7</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; 3+4</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp;&nbsp; 7</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &#39;&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

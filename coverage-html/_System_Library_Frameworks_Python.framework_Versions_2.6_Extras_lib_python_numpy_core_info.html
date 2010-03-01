@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/core/info</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/core/info</b> :
+            <span class='pc_cov'>100%</span>
+        </h1>
+        <h2 class='stats'>
+            3 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>3 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>0 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='stm run hide_run'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='pln'>4</p>
+<p class='pln'>5</p>
+<p class='pln'>6</p>
+<p class='pln'>7</p>
+<p class='pln'>8</p>
+<p class='pln'>9</p>
+<p class='pln'>10</p>
+<p class='pln'>11</p>
+<p class='pln'>12</p>
+<p class='pln'>13</p>
+<p class='pln'>14</p>
+<p class='pln'>15</p>
+<p class='pln'>16</p>
+<p class='pln'>17</p>
+<p class='pln'>18</p>
+<p class='pln'>19</p>
+<p class='pln'>20</p>
+<p class='pln'>21</p>
+<p class='pln'>22</p>
+<p class='pln'>23</p>
+<p class='pln'>24</p>
+<p class='pln'>25</p>
+<p class='pln'>26</p>
+<p class='pln'>27</p>
+<p class='pln'>28</p>
+<p class='pln'>29</p>
+<p class='pln'>30</p>
+<p class='pln'>31</p>
+<p class='pln'>32</p>
+<p class='pln'>33</p>
+<p class='pln'>34</p>
+<p class='pln'>35</p>
+<p class='pln'>36</p>
+<p class='pln'>37</p>
+<p class='pln'>38</p>
+<p class='pln'>39</p>
+<p class='pln'>40</p>
+<p class='pln'>41</p>
+<p class='pln'>42</p>
+<p class='pln'>43</p>
+<p class='pln'>44</p>
+<p class='pln'>45</p>
+<p class='pln'>46</p>
+<p class='pln'>47</p>
+<p class='pln'>48</p>
+<p class='pln'>49</p>
+<p class='pln'>50</p>
+<p class='pln'>51</p>
+<p class='pln'>52</p>
+<p class='pln'>53</p>
+<p class='pln'>54</p>
+<p class='pln'>55</p>
+<p class='pln'>56</p>
+<p class='pln'>57</p>
+<p class='pln'>58</p>
+<p class='pln'>59</p>
+<p class='pln'>60</p>
+<p class='pln'>61</p>
+<p class='pln'>62</p>
+<p class='pln'>63</p>
+<p class='pln'>64</p>
+<p class='pln'>65</p>
+<p class='pln'>66</p>
+<p class='pln'>67</p>
+<p class='pln'>68</p>
+<p class='pln'>69</p>
+<p class='pln'>70</p>
+<p class='pln'>71</p>
+<p class='pln'>72</p>
+<p class='pln'>73</p>
+<p class='pln'>74</p>
+<p class='pln'>75</p>
+<p class='pln'>76</p>
+<p class='pln'>77</p>
+<p class='pln'>78</p>
+<p class='pln'>79</p>
+<p class='pln'>80</p>
+<p class='pln'>81</p>
+<p class='pln'>82</p>
+<p class='pln'>83</p>
+<p class='pln'>84</p>
+<p class='stm run hide_run'>85</p>
+<p class='stm run hide_run'>86</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='stm run hide_run'><span class='nam'>__doc__</span> <span class='op'>=</span> <span class='str'>&quot;&quot;&quot;Defines a multi-dimensional array and useful procedures for Numerical computation.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Functions</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; array&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - NumPy Array construction</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; zeros&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return an array of all zeros</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; empty&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return an unitialized array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; shape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return shape of sequence or array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; rank&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Return number of dimensions</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; size&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Return number of elements in entire array or a</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; certain dimension</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; fromstring&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Construct array from (byte) string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; take&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Select sub-arrays using sequence of indices</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; put&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Set sub-arrays using sequence of 1-D indices</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; putmask&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Set portion of arrays using a mask</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; reshape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return array with new shape</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; repeat&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Repeat elements of array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; choose&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Construct new array from indexed array tuple</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; correlate&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Correlate two 1-d arrays</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; searchsorted&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Search for element in 1-d array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; sum&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Total sum over a specified dimension</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; average&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Average, possibly weighted, over axis or array.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; cumsum&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Cumulative sum over a specified dimension</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; product&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Total product over a specified dimension</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; cumproduct&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Cumulative product over a specified dimension</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; alltrue&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Logical and over an entire axis</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; sometrue&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Logical or over an entire axis</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; allclose&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Tests if sequences are essentially equal</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>More Functions:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; arange&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Return regularly spaced array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; asarray&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Guarantee NumPy array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; convolve&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Convolve two 1-d arrays</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; swapaxes&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Exchange axes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; concatenate&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Join arrays together</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; transpose&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Permute axes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; sort&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Sort elements of array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; argsort&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Indices of sorted array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; argmax&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Index of largest value</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; argmin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Index of smallest value</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; inner&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Innerproduct of two arrays</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; dot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Dot product (matrix multiplication)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; outer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Outerproduct of two arrays</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; resize&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Return array with arbitrary new shape</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; indices&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Tuple of indices</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; fromfunction&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Construct array from universal function</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; diagonal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Return diagonal array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; trace&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Trace of array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; dump&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Dump array to file object (pickle)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; dumps&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return pickled string representing data</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; load&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Return array stored in file object</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; loads&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return array from pickled string</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; ravel&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Return array as 1-D</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; nonzero&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Indices of nonzero elements for 1-D array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; shape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Shape of array</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; where&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Construct array from binary result</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; compress&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Elements of array where condition is true</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; clip&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Clip array between two values</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; ones&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Array of all ones</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>-&nbsp;&nbsp; identity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 2-D identity array (matrix)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>(Universal) Math Functions</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; add&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; logical_or&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; exp</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; subtract&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; logical_xor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; log</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; multiply&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; logical_not&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; log10</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; divide&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; maximum&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sin</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; divide_safe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minimum&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sinh</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; conjugate&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bitwise_and&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; power&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bitwise_or&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; tan</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; absolute&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bitwise_xor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tanh</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; negative&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; invert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ceil</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; greater&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left_shift&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; fabs</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; greater_equal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right_shift&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; floor</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; less&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; arccos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; arctan2</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; less_equal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; arcsin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; fmod</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; equal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arctan&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; hypot</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; not_equal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; around</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; logical_and&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cosh&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; sign</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp;&nbsp; arccosh&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arcsinh&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arctanh</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>depends</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;testing&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>global_symbols</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;*&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

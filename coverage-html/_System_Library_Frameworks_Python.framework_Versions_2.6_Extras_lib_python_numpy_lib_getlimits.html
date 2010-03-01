@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/lib/getlimits</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/lib/getlimits</b> :
+            <span class='pc_cov'>20%</span>
+        </h1>
+        <h2 class='stats'>
+            112 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>22 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>90 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='pln'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='stm run hide_run'>4</p>
+<p class='pln'>5</p>
+<p class='stm run hide_run'>6</p>
+<p class='stm run hide_run'>7</p>
+<p class='stm run hide_run'>8</p>
+<p class='stm run hide_run'>9</p>
+<p class='stm run hide_run'>10</p>
+<p class='pln'>11</p>
+<p class='stm run hide_run'>12</p>
+<p class='pln'>13</p>
+<p class='stm mis'>14</p>
+<p class='stm mis'>15</p>
+<p class='pln'>16</p>
+<p class='stm run hide_run'>17</p>
+<p class='pln'>18</p>
+<p class='pln'>19</p>
+<p class='pln'>20</p>
+<p class='pln'>21</p>
+<p class='pln'>22</p>
+<p class='stm run hide_run'>23</p>
+<p class='pln'>24</p>
+<p class='pln'>25</p>
+<p class='pln'>26</p>
+<p class='pln'>27</p>
+<p class='pln'>28</p>
+<p class='pln'>29</p>
+<p class='pln'>30</p>
+<p class='pln'>31</p>
+<p class='pln'>32</p>
+<p class='pln'>33</p>
+<p class='pln'>34</p>
+<p class='pln'>35</p>
+<p class='pln'>36</p>
+<p class='pln'>37</p>
+<p class='pln'>38</p>
+<p class='pln'>39</p>
+<p class='pln'>40</p>
+<p class='pln'>41</p>
+<p class='pln'>42</p>
+<p class='pln'>43</p>
+<p class='pln'>44</p>
+<p class='pln'>45</p>
+<p class='pln'>46</p>
+<p class='pln'>47</p>
+<p class='pln'>48</p>
+<p class='pln'>49</p>
+<p class='pln'>50</p>
+<p class='pln'>51</p>
+<p class='pln'>52</p>
+<p class='pln'>53</p>
+<p class='pln'>54</p>
+<p class='pln'>55</p>
+<p class='pln'>56</p>
+<p class='pln'>57</p>
+<p class='pln'>58</p>
+<p class='pln'>59</p>
+<p class='pln'>60</p>
+<p class='pln'>61</p>
+<p class='pln'>62</p>
+<p class='pln'>63</p>
+<p class='pln'>64</p>
+<p class='pln'>65</p>
+<p class='pln'>66</p>
+<p class='pln'>67</p>
+<p class='pln'>68</p>
+<p class='pln'>69</p>
+<p class='pln'>70</p>
+<p class='pln'>71</p>
+<p class='pln'>72</p>
+<p class='pln'>73</p>
+<p class='pln'>74</p>
+<p class='pln'>75</p>
+<p class='pln'>76</p>
+<p class='pln'>77</p>
+<p class='pln'>78</p>
+<p class='pln'>79</p>
+<p class='pln'>80</p>
+<p class='pln'>81</p>
+<p class='pln'>82</p>
+<p class='pln'>83</p>
+<p class='pln'>84</p>
+<p class='pln'>85</p>
+<p class='pln'>86</p>
+<p class='pln'>87</p>
+<p class='stm run hide_run'>88</p>
+<p class='pln'>89</p>
+<p class='stm run hide_run'>90</p>
+<p class='stm mis'>91</p>
+<p class='stm mis'>92</p>
+<p class='stm mis'>93</p>
+<p class='stm mis'>94</p>
+<p class='stm mis'>95</p>
+<p class='stm mis'>96</p>
+<p class='stm mis'>97</p>
+<p class='stm mis'>98</p>
+<p class='stm mis'>99</p>
+<p class='stm mis'>100</p>
+<p class='stm mis'>101</p>
+<p class='stm mis'>102</p>
+<p class='stm mis'>103</p>
+<p class='stm mis'>104</p>
+<p class='stm mis'>105</p>
+<p class='stm mis'>106</p>
+<p class='stm mis'>107</p>
+<p class='stm mis'>108</p>
+<p class='stm mis'>109</p>
+<p class='stm mis'>110</p>
+<p class='stm mis'>111</p>
+<p class='stm mis'>112</p>
+<p class='stm mis'>113</p>
+<p class='stm mis'>114</p>
+<p class='stm mis'>115</p>
+<p class='pln'>116</p>
+<p class='stm run hide_run'>117</p>
+<p class='stm mis'>118</p>
+<p class='stm mis'>119</p>
+<p class='stm mis'>120</p>
+<p class='stm mis'>121</p>
+<p class='stm mis'>122</p>
+<p class='stm mis'>123</p>
+<p class='stm mis'>124</p>
+<p class='stm mis'>125</p>
+<p class='stm mis'>126</p>
+<p class='stm mis'>127</p>
+<p class='stm mis'>128</p>
+<p class='stm mis'>129</p>
+<p class='stm mis'>130</p>
+<p class='pln'>131</p>
+<p class='stm mis'>132</p>
+<p class='pln'>133</p>
+<p class='stm mis'>134</p>
+<p class='pln'>135</p>
+<p class='pln'>136</p>
+<p class='pln'>137</p>
+<p class='pln'>138</p>
+<p class='pln'>139</p>
+<p class='stm mis'>140</p>
+<p class='pln'>141</p>
+<p class='pln'>142</p>
+<p class='stm mis'>143</p>
+<p class='stm mis'>144</p>
+<p class='stm mis'>145</p>
+<p class='stm mis'>146</p>
+<p class='stm mis'>147</p>
+<p class='stm mis'>148</p>
+<p class='stm mis'>149</p>
+<p class='stm mis'>150</p>
+<p class='stm mis'>151</p>
+<p class='stm mis'>152</p>
+<p class='stm mis'>153</p>
+<p class='stm mis'>154</p>
+<p class='stm mis'>155</p>
+<p class='stm mis'>156</p>
+<p class='stm mis'>157</p>
+<p class='pln'>158</p>
+<p class='stm run hide_run'>159</p>
+<p class='stm mis'>160</p>
+<p class='pln'>161</p>
+<p class='pln'>162</p>
+<p class='pln'>163</p>
+<p class='pln'>164</p>
+<p class='pln'>165</p>
+<p class='pln'>166</p>
+<p class='pln'>167</p>
+<p class='pln'>168</p>
+<p class='pln'>169</p>
+<p class='pln'>170</p>
+<p class='pln'>171</p>
+<p class='pln'>172</p>
+<p class='stm run hide_run'>173</p>
+<p class='pln'>174</p>
+<p class='pln'>175</p>
+<p class='pln'>176</p>
+<p class='pln'>177</p>
+<p class='pln'>178</p>
+<p class='pln'>179</p>
+<p class='pln'>180</p>
+<p class='pln'>181</p>
+<p class='pln'>182</p>
+<p class='pln'>183</p>
+<p class='pln'>184</p>
+<p class='pln'>185</p>
+<p class='pln'>186</p>
+<p class='pln'>187</p>
+<p class='pln'>188</p>
+<p class='pln'>189</p>
+<p class='pln'>190</p>
+<p class='pln'>191</p>
+<p class='pln'>192</p>
+<p class='pln'>193</p>
+<p class='pln'>194</p>
+<p class='pln'>195</p>
+<p class='pln'>196</p>
+<p class='pln'>197</p>
+<p class='pln'>198</p>
+<p class='pln'>199</p>
+<p class='pln'>200</p>
+<p class='pln'>201</p>
+<p class='pln'>202</p>
+<p class='pln'>203</p>
+<p class='pln'>204</p>
+<p class='pln'>205</p>
+<p class='pln'>206</p>
+<p class='pln'>207</p>
+<p class='pln'>208</p>
+<p class='pln'>209</p>
+<p class='pln'>210</p>
+<p class='pln'>211</p>
+<p class='pln'>212</p>
+<p class='pln'>213</p>
+<p class='pln'>214</p>
+<p class='pln'>215</p>
+<p class='pln'>216</p>
+<p class='pln'>217</p>
+<p class='pln'>218</p>
+<p class='pln'>219</p>
+<p class='stm run hide_run'>220</p>
+<p class='stm run hide_run'>221</p>
+<p class='pln'>222</p>
+<p class='stm run hide_run'>223</p>
+<p class='stm mis'>224</p>
+<p class='stm mis'>225</p>
+<p class='stm mis'>226</p>
+<p class='stm mis'>227</p>
+<p class='stm mis'>228</p>
+<p class='stm mis'>229</p>
+<p class='pln'>230</p>
+<p class='stm run hide_run'>231</p>
+<p class='pln'>232</p>
+<p class='stm mis'>233</p>
+<p class='stm mis'>234</p>
+<p class='pln'>235</p>
+<p class='stm mis'>236</p>
+<p class='stm mis'>237</p>
+<p class='stm mis'>238</p>
+<p class='stm mis'>239</p>
+<p class='stm mis'>240</p>
+<p class='stm mis'>241</p>
+<p class='pln'>242</p>
+<p class='stm run hide_run'>243</p>
+<p class='pln'>244</p>
+<p class='stm run hide_run'>245</p>
+<p class='pln'>246</p>
+<p class='stm mis'>247</p>
+<p class='stm mis'>248</p>
+<p class='stm mis'>249</p>
+<p class='stm mis'>250</p>
+<p class='stm mis'>251</p>
+<p class='pln'>252</p>
+<p class='stm mis'>253</p>
+<p class='stm mis'>254</p>
+<p class='stm mis'>255</p>
+<p class='pln'>256</p>
+<p class='stm run hide_run'>257</p>
+<p class='pln'>258</p>
+<p class='stm run hide_run'>259</p>
+<p class='stm mis'>260</p>
+<p class='stm mis'>261</p>
+<p class='stm mis'>262</p>
+<p class='stm mis'>263</p>
+<p class='stm mis'>264</p>
+<p class='stm mis'>265</p>
+<p class='stm mis'>266</p>
+<p class='stm mis'>267</p>
+<p class='stm mis'>268</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='pln'><span class='str'>&quot;&quot;&quot; Machine limits for Float32 and Float64 and (long double) if available...</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>__all__</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;finfo&#39;</span><span class='op'>,</span><span class='str'>&#39;iinfo&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>machar</span> <span class='key'>import</span> <span class='nam'>MachAr</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>numeric</span> <span class='key'>as</span> <span class='nam'>numeric</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>numerictypes</span> <span class='key'>as</span> <span class='nam'>ntypes</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>numeric</span> <span class='key'>import</span> <span class='nam'>array</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>import</span> <span class='nam'>numpy</span> <span class='key'>as</span> <span class='nam'>np</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>def</span> <span class='nam'>_frz</span><span class='op'>(</span><span class='nam'>a</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;fix rank-0 --&gt; rank-1&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>a</span><span class='op'>.</span><span class='nam'>ndim</span> <span class='op'>==</span> <span class='num'>0</span><span class='op'>:</span> <span class='nam'>a</span><span class='op'>.</span><span class='nam'>shape</span> <span class='op'>=</span> <span class='op'>(</span><span class='num'>1</span><span class='op'>,</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>a</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>_convert_to_float</span> <span class='op'>=</span> <span class='op'>{</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>csingle</span><span class='op'>:</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>single</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>complex_</span><span class='op'>:</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>float_</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>clongfloat</span><span class='op'>:</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>longfloat</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>class</span> <span class='nam'>finfo</span><span class='op'>(</span><span class='nam'>object</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; finfo(dtype)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Machine limits for floating point types.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Attributes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; eps : floating point number of the appropriate type</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The smallest representable number such that ``1.0 + eps != 1.0``.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; epsneg : floating point number of the appropriate type</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The smallest representable number such that ``1.0 - epsneg != 1.0``.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; iexp : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The number of bits in the exponent portion of the floating point</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; representation.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; machar : MachAr</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The object which calculated these parameters and holds more detailed</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; information.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; machep : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The exponent that yields ``eps``.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; max : floating point number of the appropriate type</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The largest representable number.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; maxexp : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The smallest positive power of the base (2) that causes overflow.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; min : floating point number of the appropriate type</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The smallest representable number, typically ``-max``.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; minexp : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The most negative power of the base (2) consistent with there being</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; no leading 0s in the mantissa.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; negep : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The exponent that yields ``epsneg``.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; nexp : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The number of bits in the exponent including its sign and bias.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; nmant : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The number of bits in the mantissa.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; precision : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The approximate number of decimal digits to which this kind of float</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; is precise.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; resolution : floating point number of the appropriate type</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The approximate decimal resolution of this type, i.e.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; ``10**-precision``.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; tiny : floating point number of the appropriate type</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The smallest-magnitude usable number.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; dtype : floating point type, dtype, or instance</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The kind of floating point data type to get information about.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; numpy.lib.machar.MachAr :</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The implementation of the tests that produce this information.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; iinfo :</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The equivalent for integer data types.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Notes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -----</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; For developers of numpy: do not instantiate this at the module level. The</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; initial calculation of these parameters is expensive and negatively impacts</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; import times. These objects are cached, so calling ``finfo()`` repeatedly</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; inside your functions is not a problem.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>_finfo_cache</span> <span class='op'>=</span> <span class='op'>{</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__new__</span><span class='op'>(</span><span class='nam'>cls</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>obj</span> <span class='op'>=</span> <span class='nam'>cls</span><span class='op'>.</span><span class='nam'>_finfo_cache</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>,</span><span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>obj</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>obj</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtypes</span> <span class='op'>=</span> <span class='op'>[</span><span class='nam'>dtype</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>newdtype</span> <span class='op'>=</span> <span class='nam'>numeric</span><span class='op'>.</span><span class='nam'>obj2sctype</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>newdtype</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>dtype</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtypes</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='nam'>newdtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>newdtype</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>issubclass</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>,</span> <span class='nam'>numeric</span><span class='op'>.</span><span class='nam'>inexact</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>,</span> <span class='str'>&quot;data type %r not inexact&quot;</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>obj</span> <span class='op'>=</span> <span class='nam'>cls</span><span class='op'>.</span><span class='nam'>_finfo_cache</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>,</span><span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>obj</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>obj</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>issubclass</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>,</span> <span class='nam'>numeric</span><span class='op'>.</span><span class='nam'>floating</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>newdtype</span> <span class='op'>=</span> <span class='nam'>_convert_to_float</span><span class='op'>[</span><span class='nam'>dtype</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>newdtype</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>dtype</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtypes</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='nam'>newdtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>newdtype</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>obj</span> <span class='op'>=</span> <span class='nam'>cls</span><span class='op'>.</span><span class='nam'>_finfo_cache</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>,</span><span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>obj</span> <span class='key'>is</span> <span class='key'>not</span> <span class='nam'>None</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>obj</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>obj</span> <span class='op'>=</span> <span class='nam'>object</span><span class='op'>.</span><span class='nam'>__new__</span><span class='op'>(</span><span class='nam'>cls</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>_init</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>dt</span> <span class='key'>in</span> <span class='nam'>dtypes</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>cls</span><span class='op'>.</span><span class='nam'>_finfo_cache</span><span class='op'>[</span><span class='nam'>dt</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>obj</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>obj</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>_init</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>dtype</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>dtype</span> <span class='key'>is</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>double</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>itype</span> <span class='op'>=</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>int64</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fmt</span> <span class='op'>=</span> <span class='str'>&#39;%24.16e&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>precname</span> <span class='op'>=</span> <span class='str'>&#39;double&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>elif</span> <span class='nam'>dtype</span> <span class='key'>is</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>single</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>itype</span> <span class='op'>=</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>int32</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fmt</span> <span class='op'>=</span> <span class='str'>&#39;%15.7e&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>precname</span> <span class='op'>=</span> <span class='str'>&#39;single&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>elif</span> <span class='nam'>dtype</span> <span class='key'>is</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>longdouble</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>itype</span> <span class='op'>=</span> <span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>longlong</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>fmt</span> <span class='op'>=</span> <span class='str'>&#39;%s&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>precname</span> <span class='op'>=</span> <span class='str'>&#39;long double&#39;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>,</span> <span class='nam'>repr</span><span class='op'>(</span><span class='nam'>dtype</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>machar</span> <span class='op'>=</span> <span class='nam'>MachAr</span><span class='op'>(</span><span class='key'>lambda</span> <span class='nam'>v</span><span class='op'>:</span><span class='nam'>array</span><span class='op'>(</span><span class='op'>[</span><span class='nam'>v</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>lambda</span> <span class='nam'>v</span><span class='op'>:</span><span class='nam'>_frz</span><span class='op'>(</span><span class='nam'>v</span><span class='op'>.</span><span class='nam'>astype</span><span class='op'>(</span><span class='nam'>itype</span><span class='op'>)</span><span class='op'>)</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>lambda</span> <span class='nam'>v</span><span class='op'>:</span><span class='nam'>array</span><span class='op'>(</span><span class='nam'>_frz</span><span class='op'>(</span><span class='nam'>v</span><span class='op'>)</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>lambda</span> <span class='nam'>v</span><span class='op'>:</span> <span class='nam'>fmt</span> <span class='op'>%</span> <span class='nam'>array</span><span class='op'>(</span><span class='nam'>_frz</span><span class='op'>(</span><span class='nam'>v</span><span class='op'>)</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='op'>,</span> <span class='nam'>dtype</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;numpy %s precision floating point number&#39;</span> <span class='op'>%</span> <span class='nam'>precname</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>word</span> <span class='key'>in</span> <span class='op'>[</span><span class='str'>&#39;precision&#39;</span><span class='op'>,</span> <span class='str'>&#39;iexp&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>&#39;maxexp&#39;</span><span class='op'>,</span><span class='str'>&#39;minexp&#39;</span><span class='op'>,</span><span class='str'>&#39;negep&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>&#39;machep&#39;</span><span class='op'>]</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>setattr</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span><span class='nam'>word</span><span class='op'>,</span><span class='nam'>getattr</span><span class='op'>(</span><span class='nam'>machar</span><span class='op'>,</span> <span class='nam'>word</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>word</span> <span class='key'>in</span> <span class='op'>[</span><span class='str'>&#39;tiny&#39;</span><span class='op'>,</span><span class='str'>&#39;resolution&#39;</span><span class='op'>,</span><span class='str'>&#39;epsneg&#39;</span><span class='op'>]</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>setattr</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span><span class='nam'>word</span><span class='op'>,</span><span class='nam'>getattr</span><span class='op'>(</span><span class='nam'>machar</span><span class='op'>,</span> <span class='nam'>word</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>squeeze</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>max</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>huge</span><span class='op'>.</span><span class='nam'>flat</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>min</span> <span class='op'>=</span> <span class='op'>-</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>max</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>eps</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>eps</span><span class='op'>.</span><span class='nam'>flat</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>nexp</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>iexp</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>nmant</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>it</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>machar</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_str_tiny</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>_str_xmin</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_str_max</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>_str_xmax</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_str_epsneg</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>_str_epsneg</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_str_eps</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>_str_eps</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>_str_resolution</span> <span class='op'>=</span> <span class='nam'>machar</span><span class='op'>.</span><span class='nam'>_str_resolution</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>self</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__str__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='str'>&#39;&#39;&#39;\</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Machine parameters for %(dtype)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>---------------------------------------------------------------------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>precision=%(precision)3s&nbsp;&nbsp; resolution=%(_str_resolution)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>machep=%(machep)6s&nbsp;&nbsp; eps=&nbsp; &nbsp;&nbsp; %(_str_eps)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>negep =%(negep)6s&nbsp;&nbsp; epsneg=&nbsp; %(_str_epsneg)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>minexp=%(minexp)6s&nbsp;&nbsp; tiny=&nbsp; &nbsp; %(_str_tiny)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>maxexp=%(maxexp)6s&nbsp;&nbsp; max=&nbsp; &nbsp;&nbsp; %(_str_max)s</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>nexp&nbsp; =%(nexp)6s&nbsp;&nbsp; min=&nbsp; &nbsp; &nbsp;&nbsp; -max</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>---------------------------------------------------------------------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&#39;&#39;&#39;</span> <span class='op'>%</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>__dict__</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>class</span> <span class='nam'>iinfo</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; iinfo(type)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Machine limits for integer types.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Attributes</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; min : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The smallest integer expressible by the type.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; max : int</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The largest integer expressible by the type.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Parameters</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; ----------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; type : integer type, dtype, or instance</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; The kind of integer data type to get information about.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; See Also</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; finfo : The equivalent for floating point data types.</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; Examples</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; --------</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; With types:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii16 = np.iinfo(np.int16)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii16.min</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -32768</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii16.max</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; 32767</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii32 = np.iinfo(np.int32)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii32.min</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -2147483648</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii32.max</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; 2147483647</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; With instances:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii32 = np.iinfo(np.int32(10))</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii32.min</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; -2147483648</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &gt;&gt;&gt; ii32.max</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; 2147483647</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>_min_vals</span> <span class='op'>=</span> <span class='op'>{</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>_max_vals</span> <span class='op'>=</span> <span class='op'>{</span><span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>type</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>dtype</span> <span class='op'>=</span> <span class='nam'>np</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>(</span><span class='nam'>type</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>kind</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>kind</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>bits</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>dtype</span><span class='op'>.</span><span class='nam'>itemsize</span> <span class='op'>*</span> <span class='num'>8</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>key</span> <span class='op'>=</span> <span class='str'>&quot;%s%d&quot;</span> <span class='op'>%</span> <span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>kind</span><span class='op'>,</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>bits</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>kind</span> <span class='key'>in</span> <span class='str'>&#39;iu&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>raise</span> <span class='nam'>ValueError</span><span class='op'>(</span><span class='str'>&quot;Invalid integer data type.&quot;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>min</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Minimum value of given dtype.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>kind</span> <span class='op'>==</span> <span class='str'>&#39;u&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='num'>0</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>val</span> <span class='op'>=</span> <span class='nam'>iinfo</span><span class='op'>.</span><span class='nam'>_min_vals</span><span class='op'>[</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>key</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>KeyError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>val</span> <span class='op'>=</span> <span class='nam'>int</span><span class='op'>(</span><span class='op'>-</span><span class='op'>(</span><span class='num'>1L</span> <span class='op'>&lt;&lt;</span> <span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>bits</span><span class='op'>-</span><span class='num'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>iinfo</span><span class='op'>.</span><span class='nam'>_min_vals</span><span class='op'>[</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>key</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>val</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>val</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>min</span> <span class='op'>=</span> <span class='nam'>property</span><span class='op'>(</span><span class='nam'>min</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>max</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Maximum value of given dtype.&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>try</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>val</span> <span class='op'>=</span> <span class='nam'>iinfo</span><span class='op'>.</span><span class='nam'>_max_vals</span><span class='op'>[</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>key</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>except</span> <span class='nam'>KeyError</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>kind</span> <span class='op'>==</span> <span class='str'>&#39;u&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>val</span> <span class='op'>=</span> <span class='nam'>int</span><span class='op'>(</span><span class='op'>(</span><span class='num'>1L</span> <span class='op'>&lt;&lt;</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>bits</span><span class='op'>)</span> <span class='op'>-</span> <span class='num'>1</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>val</span> <span class='op'>=</span> <span class='nam'>int</span><span class='op'>(</span><span class='op'>(</span><span class='num'>1L</span> <span class='op'>&lt;&lt;</span> <span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>bits</span><span class='op'>-</span><span class='num'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>-</span> <span class='num'>1</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>iinfo</span><span class='op'>.</span><span class='nam'>_max_vals</span><span class='op'>[</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>key</span><span class='op'>]</span> <span class='op'>=</span> <span class='nam'>val</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>val</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>max</span> <span class='op'>=</span> <span class='nam'>property</span><span class='op'>(</span><span class='nam'>max</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>if</span> <span class='nam'>__name__</span> <span class='op'>==</span> <span class='str'>&#39;__main__&#39;</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>f</span> <span class='op'>=</span> <span class='nam'>finfo</span><span class='op'>(</span><span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>single</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&#39;single epsilon:&#39;</span><span class='op'>,</span><span class='nam'>f</span><span class='op'>.</span><span class='nam'>eps</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&#39;single tiny:&#39;</span><span class='op'>,</span><span class='nam'>f</span><span class='op'>.</span><span class='nam'>tiny</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>f</span> <span class='op'>=</span> <span class='nam'>finfo</span><span class='op'>(</span><span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>float</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&#39;float epsilon:&#39;</span><span class='op'>,</span><span class='nam'>f</span><span class='op'>.</span><span class='nam'>eps</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&#39;float tiny:&#39;</span><span class='op'>,</span><span class='nam'>f</span><span class='op'>.</span><span class='nam'>tiny</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='nam'>f</span> <span class='op'>=</span> <span class='nam'>finfo</span><span class='op'>(</span><span class='nam'>ntypes</span><span class='op'>.</span><span class='nam'>longfloat</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&#39;longfloat epsilon:&#39;</span><span class='op'>,</span><span class='nam'>f</span><span class='op'>.</span><span class='nam'>eps</span><span class='strut'>&nbsp;</span></p>
+<p class='stm mis'>&nbsp; &nbsp; <span class='key'>print</span> <span class='str'>&#39;longfloat tiny:&#39;</span><span class='op'>,</span><span class='nam'>f</span><span class='op'>.</span><span class='nam'>tiny</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

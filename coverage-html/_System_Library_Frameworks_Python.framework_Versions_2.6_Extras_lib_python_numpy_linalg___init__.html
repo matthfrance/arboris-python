@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Coverage for /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/linalg/__init__</title>
+<link rel='stylesheet' href='style.css' type='text/css'>
+<script type='text/javascript' src='jquery-1.3.2.min.js'></script>
+<script type='text/javascript'>
+function toggle_lines(btn, cls) {
+    var btn = $(btn);
+    var hide = "hide_"+cls;
+    if (btn.hasClass(hide)) {
+        $("#source ."+cls).removeClass(hide);
+        btn.removeClass(hide);
+    }
+    else {
+        $("#source ."+cls).addClass(hide);
+        btn.addClass(hide);
+    }
+}
+</script>
+</head>
+<body>
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/numpy/linalg/__init__</b> :
+            <span class='pc_cov'>100%</span>
+        </h1>
+        <h2 class='stats'>
+            5 statements
+            <span class='run hide_run' onclick='toggle_lines(this, "run")'>5 run</span>
+            <span class='exc' onclick='toggle_lines(this, "exc")'>0 excluded</span>
+            <span class='mis' onclick='toggle_lines(this, "mis")'>0 missing</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div id='source'>
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td class='linenos' valign='top'>
+<p class='pln'>1</p>
+<p class='pln'>2</p>
+<p class='pln'>3</p>
+<p class='pln'>4</p>
+<p class='pln'>5</p>
+<p class='pln'>6</p>
+<p class='pln'>7</p>
+<p class='pln'>8</p>
+<p class='pln'>9</p>
+<p class='pln'>10</p>
+<p class='pln'>11</p>
+<p class='pln'>12</p>
+<p class='pln'>13</p>
+<p class='pln'>14</p>
+<p class='pln'>15</p>
+<p class='pln'>16</p>
+<p class='pln'>17</p>
+<p class='pln'>18</p>
+<p class='pln'>19</p>
+<p class='pln'>20</p>
+<p class='pln'>21</p>
+<p class='pln'>22</p>
+<p class='pln'>23</p>
+<p class='pln'>24</p>
+<p class='pln'>25</p>
+<p class='pln'>26</p>
+<p class='pln'>27</p>
+<p class='pln'>28</p>
+<p class='pln'>29</p>
+<p class='pln'>30</p>
+<p class='pln'>31</p>
+<p class='pln'>32</p>
+<p class='pln'>33</p>
+<p class='pln'>34</p>
+<p class='pln'>35</p>
+<p class='pln'>36</p>
+<p class='pln'>37</p>
+<p class='pln'>38</p>
+<p class='pln'>39</p>
+<p class='pln'>40</p>
+<p class='pln'>41</p>
+<p class='pln'>42</p>
+<p class='pln'>43</p>
+<p class='pln'>44</p>
+<p class='stm run hide_run'>45</p>
+<p class='pln'>46</p>
+<p class='stm run hide_run'>47</p>
+<p class='pln'>48</p>
+<p class='stm run hide_run'>49</p>
+<p class='stm run hide_run'>50</p>
+<p class='stm run hide_run'>51</p>
+    
+</td>
+<td class='text' valign='top'>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Core Linear Algebra Tools</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=========================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Linear algebra basics</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>==========================================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>norm&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Vector or matrix norm</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>inv&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Inverse of a square matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>solve&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Solve a linear system of equations</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>det&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Determinant of a square matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>lstsq&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Solve linear least-squares problem</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>pinv&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pseudo-inverse (Moore-Penrose) calculated using a singular</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; value decomposition</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>matrix_power&nbsp; &nbsp; Integer power of a square matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Eigenvalues and decompositions</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>==========================================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>eig&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Eigenvalues and vectors of a square matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>eigh&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Eigenvalues and eigenvectors of a Hermitian matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>eigvals&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Eigenvalues of a square matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>eigvalsh&nbsp; &nbsp; &nbsp; &nbsp; Eigenvalues of a Hermitian matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>qr&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; QR decomposition of a matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>svd&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Singular value decomposition of a matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>cholesky&nbsp; &nbsp; &nbsp; &nbsp; Cholesky decomposition of a matrix</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Tensor operations</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>==========================================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>tensorsolve&nbsp; &nbsp;&nbsp; Solve a linear tensor equation</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>tensorinv&nbsp; &nbsp; &nbsp;&nbsp; Calculate an inverse of a tensor</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>Exceptions</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>==========================================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>LinAlgError&nbsp; &nbsp;&nbsp; Indicates a failed linear algebra operation</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>=============== ==========================================================</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='com'># To get sub-modules</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>info</span> <span class='key'>import</span> <span class='nam'>__doc__</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>linalg</span> <span class='key'>import</span> <span class='op'>*</span><span class='strut'>&nbsp;</span></p>
+<p class='pln'><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='key'>from</span> <span class='nam'>numpy</span><span class='op'>.</span><span class='nam'>testing</span> <span class='key'>import</span> <span class='nam'>Tester</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>test</span> <span class='op'>=</span> <span class='nam'>Tester</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>test</span><span class='strut'>&nbsp;</span></p>
+<p class='stm run hide_run'><span class='nam'>bench</span> <span class='op'>=</span> <span class='nam'>Tester</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>test</span><span class='strut'>&nbsp;</span></p>
+    
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
